@@ -1,3 +1,5 @@
+![56685611_797157380663307_6931164831546343424_n](https://user-images.githubusercontent.com/43964222/55820326-2bd23b80-5afb-11e9-848f-c9b6c4998562.png)
+
 # LanguageAppSPA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light">
+<nav class="navbar navbar-expand-md navbar-light bg-light font-weight-bold">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">LanguageApp</a>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto scalable">
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
@@ -17,11 +17,14 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact us</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+        </ul>
+        <ul class="navbar-nav scalable ml-5">
+            <li class="nav-item" routerLinkActive="router-link-active">
+                <a class="nav-link" [routerLink]="['/register']">Register</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+            <li class="nav-item" routerLinkActive="router-link-active">
+                <!--<button class="nav-link" [routerLink]="['/login']" type="button" class="btn btn-outline-warning btn-xlarge">Login</button>-->
+                <a class="nav-link" [routerLink]="['/login']">Login</a>
             </li>
         </ul>
     </div>

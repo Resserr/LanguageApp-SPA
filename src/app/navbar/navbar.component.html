@@ -1,31 +1,44 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light font-weight-bold">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">LanguageApp</a>
-        <ul class="navbar-nav ml-auto scalable">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Find friends</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav scalable ml-5">
-            <li class="nav-item" routerLinkActive="router-link-active">
-                <a class="nav-link" [routerLink]="['/register']">Register</a>
-            </li>
-            <li class="nav-item" routerLinkActive="router-link-active">
-                <!--<button class="nav-link" [routerLink]="['/login']" type="button" class="btn btn-outline-warning btn-xlarge">Login</button>-->
-                <a class="nav-link" [routerLink]="['/login']">Login</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-expand-md navbar-light font-weight-bold">
+  <div class="container-fluid">
+    <nav class="navbar">
+      <a class="navbar-brand" href="login">
+        <img src="../../assets/img/logo.png" width="100" height="100" alt="">
+      </a>
+    </nav>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- collapse navbar -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto scalable">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Find friends</a>
+        </li>
+        <hr my-5>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav scalable ml-5">
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <a class="nav-link" [routerLink]="['/register']">Register</a>
+        </li>
+        <li class="nav-item" routerLinkActive="router-link-active">
+          <!--<button class="nav-link" [routerLink]="['/login']" type="button" class="btn btn-outline-warning btn-xlarge">Login</button>-->
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

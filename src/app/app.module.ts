@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { routes } from './routes.routing';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
    declarations: [
@@ -15,7 +16,8 @@ import { routes } from './routes.routing';
       NavbarComponent,
       LoginComponent,
       RegisterComponent,
-      HomeComponent
+      HomeComponent,
+      FooterComponent
    ],
    imports: [
       BrowserModule,

@@ -1,0 +1,22 @@
+.main {
+    width: 100%;
+    background: url(https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+strong {
+  font-family: Lato;
+  font-size: 35px;
+  font-weight: lighter;
+}
+
+p {
+  font-family: poppins, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 30px;
+}
+

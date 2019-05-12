@@ -59,6 +59,7 @@
 
 .icons-container li {
     transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .button-custom-style {
@@ -70,4 +71,9 @@
 p {
     letter-spacing: 0.0625em;
     font-size: 15px;
-  }
+}
+
+a.a-hovered:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

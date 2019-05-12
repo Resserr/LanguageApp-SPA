@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   navbarOpen = false;
 
-  toggleNavbar() {
-    this.navbarOpen = !this.navbarOpen;
-  }
-
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  logedIn(): boolean {
+    return this.authService.isLogedIn();
+  }
 }

@@ -1,3 +1,54 @@
-<p>
-  register works!
-</p>
+<div class="main d-flex align-items-center">
+  <div class="container">
+    <div class="row d-flex justify-content-end">
+      <div class="col-sm-6 mr-auto text-light mt-3">
+        <h1>Language is the dress of thought.</h1>
+        <ul style="list-style: none;">
+          <li><i class="fa fa-check mr-1" aria-hidden="true"></i>Learn new languages</li>
+          <li><i class="fa fa-check mr-1" aria-hidden="true"></i>Improve your skills</li>
+          <li><i class="fa fa-check mr-1" aria-hidden="true"></i>Find new friends</li>
+        </ul>
+      </div>
+      <div class="col-xs-8 col-sm-5 signup-container pl-4 pr-4 ">
+        <div class="icons-container">
+          <ul class="list-inline">
+            <li (click)="authWithFacebook()" class="list-inline-item"><i class="fa fa-facebook-official fa-2x facebook-style" aria-hidden="true"></i>
+            </li>
+            <li (click)="authWithGoogle()" class="list-inline-item"><i class="fa fa-google-plus-square fa-2x google-plus-style"
+                aria-hidden="true"></i></li>
+            <li class="list-inline-item"><i class="fa fa-twitter-square fa-2x twitter-style" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+        <div class="text-center mt-3">
+          <h1>Sign up</h1>
+          <p class="text-uppercase mt-4">Already have an account? <a class="text-success a-hovered">Sign in</a></p>
+        </div>
+        <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label class="col-form-label-lg" for="emailInput">Email</label>
+            <div class="input-group group-with-icon">
+              <input required type="email" class="form-control form-control-lg inputCustom" id="emailInput"
+                aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="model.email">
+              <label for="emailInput"><i class="fa fa-user fa-lg" aria-hidden="true"></i></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-form-label-lg" for="passwordInput">Password</label>
+            <div class="input-group group-with-icon">
+              <input required type="password" class="form-control form-control-lg inputCustom" id="passwordInput"
+                placeholder="Password" name="password" [(ngModel)]="model.password">
+              <label for="passwordInput"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></label>
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <button [disabled]="myForm.invalid" type="submit" class="btn btn-success button-custom-style font-weight-bold">Sign up</button>
+          </div>
+        </form>
+        <div class="text-center mb-3">
+          <p>By registering, you confirm that you accept the Terms of Use and Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

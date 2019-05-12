@@ -11,14 +11,14 @@
         </div>
         <div class="text-center mt-3">
           <h1>Log in</h1>
-          <p class="text-uppercase mt-4">New to LanguageSpace? <a class="text-warning">Sign up for free</a></p>
+          <p class="text-uppercase mt-4">New to LanguageSpace? <a class="text-warning a-hovered">Sign up for free</a></p>
         </div>
-        <form>
+        <form #loginModel="ngForm" (ngSubmit)="loginWithEmail()">
           <div class="form-group">
-            <label class="col-form-label-lg" for="exampleInputEmail1">Login</label>
+            <label class="col-form-label-lg" for="exampleInputEmail1">Email</label>
             <div class="input-group group-with-icon">
               <input type="text" class="form-control form-control-lg inputCustom" id="exampleInputEmail1"
-                aria-describedby="emailHelp" placeholder="Enter email">
+                aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="model.email">
               <label for="exampleInputEmail1"><i class="fa fa-user fa-lg" aria-hidden="true"></i></label>
             </div>
           </div>
@@ -26,7 +26,7 @@
             <label class="col-form-label-lg" for="exampleInputPassword1">Password</label>
             <div class="input-group group-with-icon">
               <input type="password" class="form-control form-control-lg inputCustom" id="exampleInputPassword1"
-                placeholder="Password">
+                placeholder="Password" name="password" [(ngModel)]="model.password">
               <label for="exampleInputPassword1"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></label>
             </div>
           </div>
@@ -41,7 +41,7 @@
           </div>
         </form>
         <div class="text-center mb-3">
-          <p class="text-uppercase text-warning">Forgot your password?</p>
+          <p><a class="text-uppercase text-warning a-hovered">Forgot your password?</a></p>
         </div>
       </div>
     </div>

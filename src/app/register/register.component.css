@@ -1,0 +1,78 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://images.pexels.com/photos/6051/bench-couple-love-people.jpg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.signup-container {
+    position: relative;
+    background:rgba(255,255,255, 0.9);
+    border-radius: 10px;
+}
+
+.inputCustom {
+    background: rgba(255,255,255, 1);
+}
+
+.group-with-icon {
+    position: relative;
+}
+
+.group-with-icon input[type=email], .group-with-icon input[type=password]{
+    padding-left: 40px;
+} 
+
+.group-with-icon i {
+    position: absolute;
+    left: 0;
+    bottom: 35%;
+    padding-left: 15px;
+    z-index: 1000;
+}
+
+.button-custom-style {
+    width: 70%;
+    font-size: 20px;
+    border-radius: 10px !important;
+}
+
+p {
+    letter-spacing: 0.0625em;
+    font-size: 15px;
+}
+
+.icons-container {
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+
+.icons-container .facebook-style {
+    color: rgb(60, 90, 153)
+}
+
+.icons-container .google-plus-style {
+    color: rgb(178,34,34)
+
+}
+
+.icons-container .twitter-style {
+    color: rgb(56,161,243);
+}
+
+.icons-container li:hover {
+    transform: scale(1.3, 1.3)
+}
+
+.icons-container li {
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+a.a-hovered:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+

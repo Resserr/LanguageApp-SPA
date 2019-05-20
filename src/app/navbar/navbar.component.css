@@ -1,5 +1,6 @@
 .scalable li a:hover {
   transform: scale(1.1, 1.1);
+  text-decoration: underline;
 }
 
 .btn-xlarge {
@@ -13,11 +14,12 @@
 .navbar-light .navbar-nav .nav-link {
   color: #FFFFFF;
   font-family: Lato;
-  font-size: 14px;
+  font-size: 15px;
+
 }
 
 nav.navbar {
-  background-color: #325DFF;
+  background-color: #4D92E9;
   padding: 0px;
 
 }

@@ -11,25 +11,31 @@ import { routes } from './routes.routing';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { ProFileComponent } from './pro-file/pro-file.component';
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      LoginComponent,
-      RegisterComponent,
-      HomeComponent,
-      FooterComponent,
-      AboutComponent,
-      NewsComponent
-   ],
-   imports: [
-      BrowserModule,
-      RouterModule.forRoot(routes)
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        LoginComponent,
+        RegisterComponent,
+        HomeComponent,
+        FooterComponent,
+        AboutComponent,
+        NewsComponent,
+        ProFileComponent,
+    ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(routes),
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+        AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

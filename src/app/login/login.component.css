@@ -1,11 +1,12 @@
 .main {
-  width: 100%;
-  background: url(https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .center-container {
@@ -64,7 +65,8 @@
 }
 
 .icons-container li {
-  transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 
 a.btn-1 {
@@ -83,17 +85,11 @@ a.btn-1:hover {
   transition: all 0.7s ease 0s;
 }
 p {
-  letter-spacing: 0.0625em;
-  font-size: 15px;
+    letter-spacing: 0.0625em;
+    font-size: 15px;
 }
 
-h1,
-.h1 {
-  font-family: Lato;
-  font-size: 40px;
-  font-weight: lighter;
-}
-
-a.text-warning {
-  color: #325DFF;
+a.a-hovered:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }

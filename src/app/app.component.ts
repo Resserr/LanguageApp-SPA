@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from './_services/auth.service';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 
 @Component({
@@ -6,8 +8,16 @@ import { Component } from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-    title = 'app';
-    isCollapsed: boolean = true;
-   
+export class AppComponent implements OnInit {
+  title = 'app';
+
+  constructor(private authService: AuthService) {}
+
+  ngOnInit(): void {
+    const jwtHelper: JwtHelperService = new JwtHelperService();
+    const token = localStorage.getItem('token');
+    if (token) {
+      this.authService.decodedToken = jwtHelper.decodeToken(token);
+    }
+  }
 }

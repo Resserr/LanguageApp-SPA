@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -11,31 +16,36 @@ import { routes } from './routes.routing';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { environment } from '../environments/environment';
-import { ProFileComponent } from './pro-file/pro-file.component';
+import { environment } from 'src/environments/environment';
+import { AuthService } from './_services/auth.service';
+import { AlertifyService } from './_services/alertify.service';
+
 @NgModule({
-    declarations: [
-        AppComponent,
-        NavbarComponent,
-        LoginComponent,
-        RegisterComponent,
-        HomeComponent,
-        FooterComponent,
-        AboutComponent,
-        NewsComponent,
-        ProFileComponent,
-    ],
-    imports: [
-        BrowserModule,
-        RouterModule.forRoot(routes),
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-        AngularFireAuthModule, // imports firebase/auth, only needed for auth features
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
+   declarations: [
+      AppComponent,
+      NavbarComponent,
+      LoginComponent,
+      RegisterComponent,
+      HomeComponent,
+      FooterComponent,
+      AboutComponent,
+      NewsComponent
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule,
+      RouterModule.forRoot(routes),
+      AngularFireModule.initializeApp(environment.firebaseConfig),
+      AngularFireAuthModule,
+      BsDropdownModule.forRoot(),
+   ],
+   providers: [
+      AuthService,
+      AlertifyService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}

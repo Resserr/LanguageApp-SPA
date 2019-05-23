@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AppComponent } from './app.component';
@@ -21,31 +21,26 @@ import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      LoginComponent,
-      RegisterComponent,
-      HomeComponent,
-      FooterComponent,
-      AboutComponent,
-      NewsComponent
-   ],
-   imports: [
-      BrowserModule,
-      HttpClientModule,
-      FormsModule,
-      RouterModule.forRoot(routes),
-      AngularFireModule.initializeApp(environment.firebaseConfig),
-      AngularFireAuthModule,
-      BsDropdownModule.forRoot(),
-   ],
-   providers: [
-      AuthService,
-      AlertifyService
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    FooterComponent,
+    AboutComponent,
+    NewsComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    BsDropdownModule.forRoot()
+  ],
+  providers: [AuthService, AlertifyService],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

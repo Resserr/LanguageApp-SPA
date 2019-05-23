@@ -1,19 +1,13 @@
 .main {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
 }
-
-.center-container {
-  margin-top: 60px;
-  float: center;
-}
-
 .inputCustom {
   background: rgba(255, 255, 255, 1);
 }
@@ -22,10 +16,9 @@
   position: relative;
 }
 
-.group-with-icon input[type=text],
-.group-with-icon input[type=password] {
+.group-with-icon input[type='text'],
+.group-with-icon input[type='password'] {
   padding-left: 40px;
-  font-family: Lato;
 }
 
 .group-with-icon i {
@@ -49,11 +42,11 @@
 }
 
 .icons-container .facebook-style {
-  color: rgb(60, 90, 153)
+  color: rgb(60, 90, 153);
 }
 
 .icons-container .google-plus-style {
-  color: rgb(178, 34, 34)
+  color: rgb(178, 34, 34);
 }
 
 .icons-container .twitter-style {
@@ -61,35 +54,25 @@
 }
 
 .icons-container li:hover {
-  transform: scale(1.3, 1.3)
+  transform: scale(1.3, 1.3);
 }
 
 .icons-container li {
-    transition: all 300ms ease-in-out;
-    cursor: pointer;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
 }
 
-a.btn-1 {
-  display: inline-block;
-  background: linear-gradient(90deg,#325DFF,#4D92E9,#22c1d7);
-  padding: 22px 78px;
-  color: white;
-}
-a.btn-1:hover {
-  background: #0077b5;
-  letter-spacing: 1px;
-  font-weight: 700 !important;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
-  transition: all 0.7s ease 0s;
+.button-custom-style {
+  width: 70%;
+  font-size: 20px;
+  border-radius: 10px !important;
 }
 p {
-    letter-spacing: 0.0625em;
-    font-size: 15px;
+  letter-spacing: 0.0625em;
+  font-size: 15px;
 }
 
 a.a-hovered:hover {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
 }

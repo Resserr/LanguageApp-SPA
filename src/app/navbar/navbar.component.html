@@ -1,40 +1,40 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light font-weight-bold">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">LanguageApp</a>
-        <ul class="navbar-nav ml-auto scalable">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Find friends</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact us</a>
-            </li>
-        </ul>
-        <div *ngIf="logedIn()" class="dropdown ml-5" dropdown>
-            <a class="dropdown-toggle scalable pointer" dropdownToggle (click)="false">
-                Welcome {{authService.decodedToken.email | titlecase}}
-            </a>
-            <div class="dropdown-menu mt-3" *dropdownMenu>
-                <a class="dropdown-item nav-link" href="#"><i class="fa fa-user"></i> Edit Profile</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item nav-link" href="#"><i class="fa fa-sign-out"></i> Logout</a>
-            </div>
-        </div>
-        <ul *ngIf="!logedIn()" class="navbar-nav scalable ml-5">
-            <li class="nav-item" routerLinkActive="router-link-active">
-                <a class="nav-link" [routerLink]="['/register']">Register</a>
-            </li>
-            <li class="nav-item" routerLinkActive="router-link-active">
-                <a class="nav-link" [routerLink]="['/login']">Login</a>
-            </li>
-        </ul>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LanguageApp</a>
+    <ul class="navbar-nav ml-auto scalable">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Find friends</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+      </li>
+    </ul>
+    <div *ngIf="logedIn()" class="dropdown ml-5" dropdown>
+      <a class="dropdown-toggle scalable pointer" dropdownToggle (click)="false">
+        Welcome {{authService.decodedToken.email | titlecase}}
+      </a>
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item nav-link" href="#"><i class="fa fa-user"></i> Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item nav-link" href="#"><i class="fa fa-sign-out"></i> Logout</a>
+      </div>
     </div>
+    <ul *ngIf="!logedIn()" class="navbar-nav scalable ml-5">
+      <li class="nav-item" routerLinkActive="router-link-active">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
+      </li>
+      <li class="nav-item" routerLinkActive="router-link-active">
+        <a class="nav-link" [routerLink]="['/login']">Login</a>
+      </li>
+    </ul>
+  </div>
 </nav>

@@ -28,11 +28,12 @@ export class RegisterComponent implements OnInit {
   }
 
   authWithFacebook() {
-    this.authService
-      .loginWithFacebook()
-      .subscribe(user => this.alertifyService.success('Succsesfully sign up'), error => {
+    this.authService.loginWithFacebook().subscribe(
+      user => this.alertifyService.success('Succsesfully sign up'),
+      error => {
         this.alertifyService.error('Something went wrong. Try again!');
-      });
+      }
+    );
   }
 
   authWithGoogle() {

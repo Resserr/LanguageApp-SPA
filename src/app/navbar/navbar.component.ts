@@ -9,10 +9,9 @@ import { AuthService } from '../_services/auth.service';
 export class NavbarComponent implements OnInit {
   navbarOpen = false;
 
-  constructor(public authService: AuthService) { }
+  constructor(public authService: AuthService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   logedIn(): boolean {
     return this.authService.isLogedIn();

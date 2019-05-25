@@ -41,6 +41,7 @@ p.card-text {
 }
 
 .card-image img {
+  padding: 0;
   width: 100%;
   height: 100%;
 }
@@ -86,7 +87,7 @@ a.btn-2 {
   display: inline-block;
   animation: animate 15s linear infinite 3s;
   background: linear-gradient(90deg, #325DFF, #4D92E9, #22c1d7);
-  margin: 30px 30px;
+  margin: 30px;
   padding: 22px 78px;
   color: white;
   transition: .33s all;

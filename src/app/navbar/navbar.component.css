@@ -2,9 +2,30 @@
   transform: scale(1.1, 1.1);
   text-decoration: underline;
 }
+
 .pointer {
   cursor: pointer;
-} 
+}
+
 .dropdown-item {
   cursor: pointer;
+}
+
+.navbar {
+  background: #4D92E9;
+}
+
+.nav-link,
+.dropdown-toggle {
+  font-family:  'Open Sans', semi-bold;
+  color: white !important;
+  font-size: 18px !important;
+}
+.navbar-brand{
+  font-family: 'Lato', bold-italic;
+  color: white !important;
+  font-size: 20px !important;
+}
+.dropdown-menu {
+ background: #4D92E9;
 }

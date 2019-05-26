@@ -19,6 +19,7 @@ import { NewsComponent } from './news/news.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
+import { AuthGuard } from './_guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { AlertifyService } from './_services/alertify.service';
     AngularFireAuthModule,
     BsDropdownModule.forRoot(),
   ],
-  providers: [AuthService, AlertifyService],
+  providers: [AuthService, AlertifyService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import { from, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { from, Observable, BehaviorSubject, of } from 'rxjs';
+import { map, delay, tap } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private authService: AngularFireAuth) {}
   private jwtHelper: JwtHelperService = new JwtHelperService();
   decodedToken: any;
+
+  constructor(private authService: AngularFireAuth, private router: Router) {
+  }
 
   public register(email: string, password: string): Promise<object> {
     return this.authService.auth.createUserWithEmailAndPassword(
@@ -34,6 +37,10 @@ export class AuthService {
   public isLogedIn(): boolean {
     return !this.jwtHelper.isTokenExpired(localStorage.getItem('token'));
   }
+
+  // private isLogedIn() {
+  //   this.theBoolean.next((!this.jwtHelper.isTokenExpired(localStorage.getItem('token'))));
+  // }
 
   public loginWithFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
@@ -58,7 +65,10 @@ export class AuthService {
           value.user.getIdToken(true).then(token => {
             localStorage.setItem('token', token);
             this.decodedToken = this.jwtHelper.decodeToken(token);
-            console.log(this.decodedToken);
+            if (this.isLogedIn()) {
+              this.router.navigate(['/news']);
+            }
+            console.log(localStorage.getItem('token'));
           });
         }
       })

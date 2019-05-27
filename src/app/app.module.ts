@@ -20,28 +20,38 @@ import { environment } from 'src/environments/environment';
 import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    FooterComponent,
-    AboutComponent,
-    NewsComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    BsDropdownModule.forRoot(),
-  ],
-  providers: [AuthService, AlertifyService, AuthGuard],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NavbarComponent,
+      LoginComponent,
+      RegisterComponent,
+      HomeComponent,
+      FooterComponent,
+      AboutComponent,
+      NewsComponent,
+      ProfileComponent,
+      ProfileEditComponent
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule,
+      RouterModule.forRoot(routes),
+      AngularFireModule.initializeApp(environment.firebaseConfig),
+      AngularFireAuthModule,
+      BsDropdownModule.forRoot()
+   ],
+   providers: [
+      AuthService,
+      AlertifyService,
+      AuthGuard
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}

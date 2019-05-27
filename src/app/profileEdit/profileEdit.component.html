@@ -1,3 +1,208 @@
-<p>
-  profileEdit works!
-</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+    <section>
+        <div class="container">
+
+          <form class="profile" action="index.html" method="post">
+            <div class="container info">
+              <span class="d-flex justify-content-between title">
+                <h1 class="">Edit your profile</h1>
+                <i class="fas fa-user-edit icon"></i>
+              </span>
+
+              <span class="d-flex justify-content-between in">
+                  <label for="name">Name and Surname</label>
+                  <input  type="text" name="name" value="" placeholder="Eric Bicfalvi">
+              </span>
+
+              <span class="d-flex justify-content-between in">
+                  <label for="b_date">Date of birth</label>
+                  <input type="date" name="b_date" value="1990-01-01"
+                  min="1945-01-01" max="2015-01-01">
+              </span>
+
+              <span class="d-flex justify-content-between in">
+                  <label for="myImage">Change your photo</label>
+                  <input type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" />
+
+              </span>
+
+              <fieldset>
+                  <legend>Choose your native languages</legend>
+                  <div>
+                    <input type="checkbox" id="pr" name="n_lang" checked>
+                    <label for="br">Portugal</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="pl" name="n_lang" >
+                    <label for="pl">Polish</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="ukr" name="n_lang" checked>
+                    <label for="ukr">Ukrainian</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="en" name="n_lang" >
+                    <label for="en">English</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="sp" name="n_lang">
+                    <label for="sp">Spanish</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="rs" name="n_lang" >
+                    <label for="rs">Russian</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="fr" name="n_lang">
+                    <label for="fr">French</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="ger" name="n_lang" >
+                    <label for="ger">German</label>
+                  </div>
+                </fieldset>
+
+                <span class="d-flex justify-content-between in">
+                    <label for="country">Where are you from?</label>
+                    <input  type="text" name="country" value="" placeholder="Lutsk">
+                </span>
+
+                <fieldset>
+                    <legend>Choose languages you want to learn</legend>
+                    <div>
+                      <input type="checkbox" id="pr" name="f_lang">
+                      <label for="br">Portugal</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pl" name="f_lang" >
+                      <label for="pl">Polish</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ukr" name="f_lang" >
+                      <label for="ukr">Ukrainian</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="en" name="f_lang" checked >
+                      <label for="en">English</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="sp" name="f_lang">
+                      <label for="sp">Spanish</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="rs" name="f_lang" >
+                      <label for="rs">Russian</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="fr" name="f_lang">
+                      <label for="fr">French</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ger" name="f_lang" checked>
+                      <label for="ger">German</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choose countries you visited</legend>
+                    <div>
+                      <input type="checkbox" id="br" name="vis_coun" checked>
+                      <label for="br">Brazil</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pl" name="vis_coun" >
+                      <label for="pl">Poland</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ukr" name="vis_coun" checked>
+                      <label for="ukr">Ukraine</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="en" name="vis_coun" >
+                      <label for="en">England</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="sp" name="vis_coun">
+                      <label for="sp">Spain</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="nor" name="vis_coun" >
+                      <label for="rs">Norway</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="fr" name="vis_coun">
+                      <label for="fr">France</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ger" name="vis_coun" checked>
+                      <label for="ger">Germany</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Choose countries you want to visit</legend>
+                    <div>
+                      <input type="checkbox" id="br" name="want_coun" checked>
+                      <label for="br">Brazil</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="pl" name="want_coun" >
+                      <label for="pl">Poland</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ukr" name="want_coun" checked>
+                      <label for="ukr">Ukraine</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="en" name="want_coun" >
+                      <label for="en">England</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="sp" name="want_coun">
+                      <label for="sp">Spain</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="nor" name="want_coun" >
+                      <label for="rs">Norway</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="fr" name="want_coun">
+                      <label for="fr">France</label>
+                    </div>
+                    <div>
+                      <input type="checkbox" id="ger" name="want_coun" checked>
+                      <label for="ger">Germany</label>
+                    </div>
+                </fieldset>
+
+                <span class="d-flex justify-content-between in">
+                    <label for="fb">Facebook link</label>
+                    <input  type="text" name="fb" value="" placeholder="www.facebook.com/user">
+                </span>
+
+                <span class="d-flex justify-content-between in">
+                    <label for="instagram">Instagram link</label>
+                    <input  type="text" name="instagram" value="" placeholder="www.instagram.com/user">
+                </span>
+
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="save">Save</button>
+                </div>
+            </div>
+
+          </form>
+        </div>
+
+
+
+    </section>
+
+</body>

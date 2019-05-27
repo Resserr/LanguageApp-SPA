@@ -1,0 +1,75 @@
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+body{
+    background-image: url("image/world.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  section{
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .info{
+    background-color: rgb(255, 255, 255, 0.97);
+    padding-top: 30px;
+    padding-left: 30px;
+    border-radius: 5px;
+  
+  }
+  .avatar{
+    width:auto;
+    height: 160px;
+  }
+  #geo{
+    width: auto;
+    height: 20px;
+    padding-right: 5px;
+    padding-left: 15px;
+  }
+  .location,.languages, .v_countries,.w_countries,.email,.fb{
+    color: #2a5885;
+  }
+  
+  .icons{
+    padding-right: 5px;
+    padding-top: 3px;
+  }
+  .icons2{
+    font-size: 35px;
+    padding-left: 15px;
+  }
+  .about{
+    padding-top: 40px;
+  }
+  .data{
+    border-style: groove;
+    border-width: thin;
+    border-radius: 5px;
+    background-color: rgb(194, 209, 234,0.95);
+    text-align: center;
+    padding-top: 20px;
+  }
+  .main_data{
+    padding-top: 30px;
+  }
+  .opinions{
+    padding-top: 50px;
+  }
+  .chat_btn{
+    height: 50px;
+      width: 100px;
+      font-size: 20px;
+  }
+  .icons3{
+    font-size: 25px;
+    padding-top: 5px;
+    margin-right: -40px;
+  }
+  .good{
+    color: green;
+    font-size: 25px;
+  }
+  .bad{
+    color: red;
+    font-size: 25px;
+  }
+  

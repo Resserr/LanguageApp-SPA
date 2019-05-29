@@ -5,7 +5,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule, Router } from '@angular/router';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -22,6 +24,8 @@ import { AlertifyService } from './_services/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
+import { UserService } from './_services/user.service';
+import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 
 @NgModule({
    declarations: [
@@ -43,12 +47,16 @@ import { ProfileEditComponent } from './profileEdit/profileEdit.component';
       RouterModule.forRoot(routes),
       AngularFireModule.initializeApp(environment.firebaseConfig),
       AngularFireAuthModule,
-      BsDropdownModule.forRoot()
+      AngularFirestoreModule,
+      BsDropdownModule.forRoot(),
+      TabsModule.forRoot()
    ],
    providers: [
       AuthService,
       AlertifyService,
-      AuthGuard
+      AuthGuard,
+      UserService,
+      ProfileEditResolver,
    ],
    bootstrap: [
       AppComponent

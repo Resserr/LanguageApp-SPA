@@ -5,6 +5,9 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { ProfileEditComponent } from './profileEdit/profileEdit.component';
+import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +17,8 @@ export const routes: Routes = [
     runGuardsAndResolvers: 'always',
     children: [
       { path: 'news', component: NewsComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'profile/edit', component: ProfileEditComponent, resolve: { user : ProfileEditResolver } },
     ]
   },
   { path: 'register', component: RegisterComponent },

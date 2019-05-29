@@ -17,12 +17,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    this.authService.register(this.model.email, this.model.password).then(
-      value => {
-        console.log(value);
-      },
+    this.authService.register(this.model.email, this.model.password).subscribe(
+      user => this.alertifyService.success('Succsesfully registered!'),
       error => {
-        console.log(error);
+        this.alertifyService.error('Something went wrong. Try again!');
       }
     );
   }

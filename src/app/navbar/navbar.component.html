@@ -26,7 +26,7 @@
         Welcome {{authService.decodedToken.email | titlecase}}
       </a>
       <div class="dropdown-menu mt-3" *dropdownMenu>
-        <a class="dropdown-item nav-link"><i class="fa fa-user"></i> Edit Profile</a>
+        <a class="dropdown-item nav-link" [routerLink]="['/profile/edit']"><i class="fa fa-user"></i> Edit Profile</a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item nav-link" (click)="logout()" ><i class="fa fa-sign-out"></i> Logout</a>
       </div>

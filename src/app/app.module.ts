@@ -22,6 +22,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
+import { FiendFriendsComponent } from './fiend-friends/fiend-friends.component';
 
 @NgModule({
    declarations: [
@@ -34,7 +35,8 @@ import { ProfileEditComponent } from './profileEdit/profileEdit.component';
       AboutComponent,
       NewsComponent,
       ProfileComponent,
-      ProfileEditComponent
+      ProfileEditComponent,
+      FiendFriendsComponent
    ],
    imports: [
       BrowserModule,

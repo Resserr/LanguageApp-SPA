@@ -19,28 +19,41 @@ import { NewsComponent } from './news/news.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
+import { ArticleComponent } from './article/article.component';
+import { AngularFirestore } from '@angular/fire/firestore/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    FooterComponent,
-    AboutComponent,
-    NewsComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    BsDropdownModule.forRoot(),
-  ],
-  providers: [AuthService, AlertifyService],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NavbarComponent,
+      LoginComponent,
+      RegisterComponent,
+      HomeComponent,
+      FooterComponent,
+      AboutComponent,
+      NewsComponent,
+      ArticleComponent,
+      
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule,
+      RouterModule.forRoot(routes),
+      AngularFireModule.initializeApp(environment.firebaseConfig),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      BsDropdownModule.forRoot()
+
+   ],
+   providers: [
+      AuthService,
+      AlertifyService,
+      AngularFirestore
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}

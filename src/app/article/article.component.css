@@ -1,0 +1,18 @@
+.img {
+  display: inline-block;
+  float: none;
+  text-align: center
+}
+
+strong {
+  font-family: Lato;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+p {
+  font-family: poppins, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+}

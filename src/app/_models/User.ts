@@ -18,7 +18,4 @@ export interface User {
   facebookLink?: string;
   instagramLink?: string;
   email?: string;
-//   socialMedia?: SocialMedia;
-  // likes: Like[];
-  // dislike: Dislike[];
 }

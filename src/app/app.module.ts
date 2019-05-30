@@ -27,6 +27,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 import { UserService } from './_services/user.service';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
+import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
+import { LanguageService } from './_services/language.service';
 
 @NgModule({
    declarations: [
@@ -58,7 +60,9 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
       AlertifyService,
       AuthGuard,
       UserService,
+      LanguageService,
       ProfileEditResolver,
+      ProfileEditLangResolver,
    ],
    bootstrap: [
       AppComponent

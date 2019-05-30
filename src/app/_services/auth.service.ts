@@ -14,7 +14,6 @@ import { User } from '../_models/User';
 export class AuthService {
   private jwtHelper: JwtHelperService = new JwtHelperService();
   decodedToken: any;
-
   constructor(
     public authServiceFirebase: AngularFireAuth,
     private userService: UserService,
@@ -45,10 +44,6 @@ export class AuthService {
   public isLogedIn(): boolean {
     return !this.jwtHelper.isTokenExpired(localStorage.getItem('token'));
   }
-
-  // private isLogedIn() {
-  //   this.theBoolean.next((!this.jwtHelper.isTokenExpired(localStorage.getItem('token'))));
-  // }
 
   public loginWithFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();

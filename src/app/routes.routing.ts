@@ -8,6 +8,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
+import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,8 @@ export const routes: Routes = [
     children: [
       { path: 'news', component: NewsComponent },
       { path: 'profile', component: ProfileComponent },
-      { path: 'profile/edit', component: ProfileEditComponent, resolve: { user : ProfileEditResolver } },
+      { path: 'profile/edit', component: ProfileEditComponent, resolve: { user : ProfileEditResolver,
+         languages: ProfileEditLangResolver } },
     ]
   },
   { path: 'register', component: RegisterComponent },

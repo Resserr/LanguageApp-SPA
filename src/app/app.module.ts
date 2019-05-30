@@ -25,6 +25,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
+import { FiendFriendsComponent } from './fiend-friends/fiend-friends.component';
 import { UserService } from './_services/user.service';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
@@ -41,7 +42,8 @@ import { LanguageService } from './_services/language.service';
       AboutComponent,
       NewsComponent,
       ProfileComponent,
-      ProfileEditComponent
+      ProfileEditComponent,
+      FiendFriendsComponent
    ],
    imports: [
       BrowserModule,

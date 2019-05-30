@@ -8,6 +8,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule, Router } from '@angular/router';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -49,7 +50,8 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
       AngularFireAuthModule,
       AngularFirestoreModule,
       BsDropdownModule.forRoot(),
-      TabsModule.forRoot()
+      TabsModule.forRoot(),
+      NgMultiSelectDropDownModule.forRoot()
    ],
    providers: [
       AuthService,

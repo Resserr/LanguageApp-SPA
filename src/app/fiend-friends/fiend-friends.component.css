@@ -1,0 +1,97 @@
+   section{
+     margin-top: 30px;
+     margin-bottom: 60px;
+   }
+   .filters{
+     padding-top: 20px;
+     padding-bottom: 10px;
+     background-color: #f8f7ee;
+     -webkit-box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+     -moz-box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+     box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+
+   }
+   .userlist{
+     background-color: white;
+     padding-top: 20px;
+     -webkit-box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+     -moz-box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+     box-shadow: -5px 3px 7px -1px rgba(115,113,115,0.63);
+
+   }
+   #geo{
+     width: auto;
+     height: 30px;
+     padding-top: 3px;
+     padding-right: 5px;
+     padding-left: 15px;
+   }
+   select{
+     border-radius: 7px;
+     height: 35px;
+   }
+   input{
+     border-radius: 7px;
+     height: 35px;
+   }
+   .icons{
+     padding-right: 5px;
+     padding-top: 10px;
+   }
+   .input_name{
+     font-size: 18px;
+     padding-right: 10px;
+     padding-top: 4px;
+   }
+   .second_row{
+     padding-top: 5px;
+   }
+   .lang_filter{
+     padding-top: 13px;
+   }
+   .avatar{
+     width:auto;
+     height: 110px;
+     padding-left: 20px;
+   }
+
+   .user{
+     padding-left: 20px;
+     padding-top: 30px;
+   }
+   .icons3{
+     padding-top: 3px;
+     margin-right: -20px;
+   }
+   .icons2{
+     padding-right: 5px;
+     padding-top: 3px;
+   }
+   .good{
+     color: green;
+   }
+   .bad{
+     color: red;
+   }
+   .opinions{
+     padding-top: 10px;
+   }
+   .location,.languages{
+     color: #2a5885;
+   }
+   #geo_s{
+     width: auto;
+     height: 20px;
+     padding-right: 5px;
+     padding-left: 15px;
+   }
+   a{
+     color: #1a52ad!important;
+   }
+   .about p{
+     font-size: 14px;
+   }
+   .user{
+     border-bottom-style: outset;
+     border-bottom-width: thin;
+   }

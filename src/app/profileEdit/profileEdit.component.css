@@ -1,55 +1,83 @@
-body{
-    background-image: radial-gradient(circle, #e9e6e6, #e5e2e2, #e1dddd, #ded9d9, #dad5d5);   }
-  section{
-    margin-top: 30px;
-    margin-bottom: 60px;
-  }
-  .profile{
-    border-style: groove;
-    border-radius: 15px;
-    margin-top: 30px;
-    background-color: rgb(255, 255, 255, 0.97);
-    width: 700px;
-  }
-  .info{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 150px!important;
-  }
-  label{
-    font-size: 18px;
-    font-weight: bold;
-  }
 
-  input{
-    border-radius: 3px;
-    text-align: center;
-  }
-  .in{
-   padding-bottom: 30px;
-  }
-  fieldset {
-  border: 2px solid #a0aaba!important;
+.img-thumbnail {
+  margin: 25px;
+  width: 85%;
+}
+.member-tabset h1, .member-tabset textarea {
+  margin-bottom: 20px; 
+}
+
+.card-body {
+  padding: 0 25px;
+}
+
+.card-footer {
+  padding: 10px 15px;
+  background-color: #fff;
+  border-top: none;
+}
+
+/* .main {
+  background-image: radial-gradient(
+    circle,
+    #e9e6e6,
+    #e5e2e2,
+    #e1dddd,
+    #ded9d9,
+    #dad5d5
+  );
+  width: 100%;
+}
+section {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.profile {
+  border-style: groove;
+  border-radius: 15px;
+  margin-top: 30px;
+  background-color: rgb(255, 255, 255, 0.97);
+  width: 700px;
+}
+.info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 150px !important;
+}
+label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input {
+  border-radius: 3px;
   text-align: center;
-  margin-bottom: 30px!important;
-  }
-  legend{
-    width: auto!important;
-  }
-  .save{
-    background-color: #11d645;
-    border-radius: 7px;
-    width: 90px;
-    height: 55px;
-    color: white;
-    font-size: 20px;
-  }
-  .title{
-   margin-bottom: 50px;
-   border-bottom-style: outset;
-   border-color: #a0aaba;
-  }
-  .icon{
-    font-size: 45px;
-    padding-left: 50px;
-  }
+}
+.in {
+  padding-bottom: 30px;
+}
+fieldset {
+  border: 2px solid #a0aaba !important;
+  text-align: center;
+  margin-bottom: 30px !important;
+}
+legend {
+  width: auto !important;
+}
+.save {
+  background-color: #11d645;
+  border-radius: 7px;
+  width: 90px;
+  height: 55px;
+  color: white;
+  font-size: 20px;
+}
+.title {
+  margin-bottom: 50px;
+  border-bottom-style: outset;
+  border-color: #a0aaba;
+}
+.icon {
+  font-size: 45px;
+  padding-left: 50px;
+} */

@@ -18,13 +18,15 @@ export class AuthGuard implements CanActivate {
     private routeSerivce: Router,
     private authService: AuthService
   ) {}
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): boolean {
     if (!this.authService.isLogedIn()) {
       this.alertifyService.warning('You have no permission to visit this page');
       this.routeSerivce.navigate(['']);
       return false;
     }
-
-   return true;
+    return true;
   }
 }

@@ -99,7 +99,6 @@ export class AuthService {
       name: '',
       surname: '',
       gender: '',
-      // age?:,
       created: new Date(),
       country: '',
       city: '',

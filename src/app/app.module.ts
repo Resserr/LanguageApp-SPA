@@ -21,12 +21,18 @@ import { NewsComponent } from './news/news.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './_services/auth.service';
 import { AlertifyService } from './_services/alertify.service';
+<<<<<<< HEAD
 import { AuthGuard } from './_guards/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 import { FiendFriendsComponent } from './fiend-friends/fiend-friends.component';
 import { UserService } from './_services/user.service';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
+=======
+import { ArticleComponent } from './article/article.component';
+import { AngularFirestore } from '@angular/fire/firestore/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+>>>>>>> slawick12
 
 @NgModule({
    declarations: [
@@ -38,9 +44,14 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
       FooterComponent,
       AboutComponent,
       NewsComponent,
+<<<<<<< HEAD
       ProfileComponent,
       ProfileEditComponent,
       FiendFriendsComponent
+=======
+      ArticleComponent,
+      
+>>>>>>> slawick12
    ],
    imports: [
       BrowserModule,
@@ -50,15 +61,24 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
       AngularFireModule.initializeApp(environment.firebaseConfig),
       AngularFireAuthModule,
       AngularFirestoreModule,
+<<<<<<< HEAD
       BsDropdownModule.forRoot(),
       TabsModule.forRoot()
+=======
+      BsDropdownModule.forRoot()
+
+>>>>>>> slawick12
    ],
    providers: [
       AuthService,
       AlertifyService,
+<<<<<<< HEAD
       AuthGuard,
       UserService,
       ProfileEditResolver,
+=======
+      AngularFirestore
+>>>>>>> slawick12
    ],
    bootstrap: [
       AppComponent

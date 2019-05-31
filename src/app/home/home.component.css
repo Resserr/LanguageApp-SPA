@@ -1,7 +1,7 @@
 .main {
-  padding: 0px;
-  width: 100%;
-  height: 100%;
+  overflow-x: hidden!important;
+  overflow-y: hidden!important;
+
 }
 
 strong {
@@ -82,7 +82,9 @@ p.card-text {
 .find-card .card-text {
   height: 120px;
 }
-
+.card-text{
+  text-align: center;
+}
 a.btn-2 {
   display: inline-block;
   animation: animate 15s linear infinite 3s;
@@ -117,3 +119,28 @@ a.btn-2:hover {
   color: white;
   min-height: 90vh;
 }
+@media screen and (max-width: 1200px) {
+  .hepl1{
+    margin-top:10rem !important;
+    }
+  }
+@media screen and (max-width: 992px) {
+  .help1{
+    margin-top:15rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+    .help1{
+      margin-top:7rem !important;
+    }
+  }
+@media screen and (max-width: 576px) {
+  .help1{
+    margin-top: 45px!important;
+  }
+  .join1 p{
+    font-size: 23px;
+  }
+}
+
+

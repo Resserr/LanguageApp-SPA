@@ -75,4 +75,32 @@ a.a-hovered:hover {
     text-decoration: underline;
     cursor: pointer;
 }
-
+@media screen and (max-width: 1200px) {
+    .fa-2x{
+        font-size: 27px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .sign-up{
+        text-align: -webkit-left!important;
+    }
+    .fa-2x{
+        font-size: 25px;
+    } 
+  }
+  @media screen and (max-width: 768px) {
+    .block-left{
+        margin-bottom: 30px;
+    }
+    .fa-2x{
+        font-size: 38px;
+    } 
+  }
+  @media screen and (max-width: 576px) {
+    .block-left{
+        display: none;
+    }
+    .icons-container{
+        top:4%;
+      }
+  }

@@ -5,12 +5,12 @@ import { UserService } from '../_services/user.service';
 @Injectable({
   providedIn: 'root'
 })
-export class MembersResolver implements Resolve<any> {
+export class MemberResolver implements Resolve<any> {
   constructor(
       private userService: UserService
   ) {}
 
   resolve(route: ActivatedRouteSnapshot): Observable<any> {
-    return this.userService.getAllUsers();
+    return this.userService.getUser(route.params['id']);
   }
 }

@@ -31,6 +31,8 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
 import { LanguageService } from './_services/language.service';
 import { UserHelper } from './_helpers/user.helper';
+import { MemberResolver } from './_resolvers/member.resolver';
+import { MembersResolver } from './_resolvers/members.resolver';
 
 @NgModule({
    declarations: [
@@ -66,6 +68,8 @@ import { UserHelper } from './_helpers/user.helper';
       LanguageService,
       ProfileEditResolver,
       ProfileEditLangResolver,
+      MemberResolver,
+      MembersResolver,
       UserHelper,
    ],
    bootstrap: [

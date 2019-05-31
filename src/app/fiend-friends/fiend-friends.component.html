@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between">
           <h2>Find friends in diferent languages </h2>
           <span class="d-flex">
-            <img id="geo" src="src/assets/img/geo.png" alt="">
+            <i class="fa fa-map-marker fa-lg pr-2" aria-hidden="true"></i>
             <select>
               <option selected> All countries</option>
               <option>Brazil</option>
@@ -76,7 +76,7 @@
           <div class="col-lg-10">
             <div class="row">
               <div class="col-lg-3">
-                <a href="#">
+                <a [routerLink]="['/profile/', user.id]" >
                   <h5>{{user.name}} {{user.surname}}</h5>
                 </a>
               </div>

@@ -76,3 +76,27 @@ a.a-hovered:hover {
   text-decoration: underline;
   cursor: pointer;
 }
+@media screen and (max-width: 1200px) {
+  .fa-2x {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .fa-2x {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .login{
+    text-align: -webkit-left!important;
+    }
+  .fa-2x {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .icons-container{
+    top:4%;
+  }
+}
+

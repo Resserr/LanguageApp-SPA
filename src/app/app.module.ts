@@ -30,6 +30,7 @@ import { UserService } from './_services/user.service';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
 import { LanguageService } from './_services/language.service';
+import { UserHelper } from './_helpers/user.helper';
 
 @NgModule({
    declarations: [
@@ -65,6 +66,7 @@ import { LanguageService } from './_services/language.service';
       LanguageService,
       ProfileEditResolver,
       ProfileEditLangResolver,
+      UserHelper,
    ],
    bootstrap: [
       AppComponent

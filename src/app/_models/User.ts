@@ -1,13 +1,14 @@
 import { SocialMedia } from './SocialMedia';
 
 export interface User {
+  id?: string;
   name: string;
   surname: string;
   gender: string;
-  created: Date;
+  created?: Date;
   country: string;
   city: string;
-  photoUrl: string;
+  photoUrl?: string;
   dateOfBirth?: Date;
   introduction?: string;
   interests?: string;

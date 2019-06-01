@@ -8,6 +8,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule, Router } from '@angular/router';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -27,6 +28,11 @@ import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 import { FiendFriendsComponent } from './fiend-friends/fiend-friends.component';
 import { UserService } from './_services/user.service';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
+import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver';
+import { LanguageService } from './_services/language.service';
+import { UserHelper } from './_helpers/user.helper';
+import { MemberResolver } from './_resolvers/member.resolver';
+import { MembersResolver } from './_resolvers/members.resolver';
 
 @NgModule({
    declarations: [
@@ -51,14 +57,20 @@ import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
       AngularFireAuthModule,
       AngularFirestoreModule,
       BsDropdownModule.forRoot(),
-      TabsModule.forRoot()
+      TabsModule.forRoot(),
+      NgMultiSelectDropDownModule.forRoot()
    ],
    providers: [
       AuthService,
       AlertifyService,
       AuthGuard,
       UserService,
+      LanguageService,
       ProfileEditResolver,
+      ProfileEditLangResolver,
+      MemberResolver,
+      MembersResolver,
+      UserHelper,
    ],
    bootstrap: [
       AppComponent

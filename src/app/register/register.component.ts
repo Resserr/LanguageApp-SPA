@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit() {
-    this.authService.register(this.model.email, this.model.password).subscribe(
+    this.authService.register(this.model).subscribe(
       user => this.alertifyService.success('Succsesfully registered!'),
       error => {
         this.alertifyService.error('Something went wrong. Try again!');
@@ -27,14 +27,16 @@ export class RegisterComponent implements OnInit {
 
   authWithFacebook() {
     this.authService.loginWithFacebook().subscribe(
-      user => this.alertifyService.success('Succsesfully sign up'),
+      user => console.log(user),
       error => {
         this.alertifyService.error('Something went wrong. Try again!');
       }
     );
   }
-
+// this.alertifyService.success('Succsesfully sign up')
   authWithGoogle() {
-    this.authService.loginWithGoogle();
+    this.authService.loginWithGoogle().subscribe(
+      user => console.log(user)
+    );
   }
 }

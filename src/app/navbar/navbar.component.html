@@ -2,14 +2,14 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">LanguageApp</a>
     <ul class="navbar-nav ml-auto scalable">
-      <li class="nav-item">
+      <li *ngIf="!logedIn()" class="nav-item">
         <a class="nav-link" [routerLink]="['']" >Home</a>
       </li>
       <li *ngIf="logedIn()" class="nav-item">
         <a class="nav-link" [routerLink]="['/news']" >News</a>
       </li>
       <li *ngIf="logedIn()" class="nav-item">
-        <a class="nav-link"href="#" >Find friends</a>
+        <a class="nav-link" [routerLink]="['/members']">Find friends</a>
       </li>
       <li *ngIf="logedIn()" class="nav-item">
         <a class="nav-link"href="#" >Messages</a>

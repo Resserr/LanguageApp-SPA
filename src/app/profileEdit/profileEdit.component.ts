@@ -14,6 +14,8 @@ import { AlertifyService } from '../_services/alertify.service';
 export class ProfileEditComponent implements OnInit {
   @ViewChild('editForm') editForm: NgForm;
   user: User;
+  dropdownList = [];
+  dropdownSettings = {};
   constructor(
     private userService: UserService,
     private authService: AuthService,
@@ -24,11 +26,27 @@ export class ProfileEditComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.data.subscribe(data => {
       this.user = data['user'];
-      console.log(this.user);
+      console.log(data['languages']);
+      data['languages'].forEach(element => {
+        this.dropdownList.push(element.name);
+      });
     });
+    this.dropdownSettings = {
+      singleSelection: false,
+      idField: 'item_id',
+      textField: 'item_text',
+      selectAllText: 'Select All',
+      unSelectAllText: 'UnSelect All',
+      itemsShowLimit: 3,
+      allowSearchFilter: true
+    };
+  }
+  onItemSelect() {
+    this.editForm.controls['email'].markAsDirty();
   }
 
   updateChanges() {
+    console.log(this.user);
     this.userService
       .setUser(this.authService.decodedToken.user_id, this.user)
       .subscribe(
@@ -37,4 +55,5 @@ export class ProfileEditComponent implements OnInit {
       );
     this.editForm.reset(this.editForm.value);
   }
+
 }

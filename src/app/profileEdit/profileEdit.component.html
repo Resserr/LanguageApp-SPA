@@ -90,6 +90,24 @@
                   <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
                 </div>
               </div>
+              <h4>Languages you know</h4>
+              <div class="form-row">
+                <div class="col-md-8 mb-3">
+                  <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
+                    [placeholder]="'Please, select languages you know'" [data]="dropdownList"
+                    [(ngModel)]="user.knownLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
+                  </ng-multiselect-dropdown>
+                </div>
+              </div>
+              <h4>Languages you want to learn</h4>
+              <div class="form-row">
+                <div class="col-md-8 mb-3">
+                  <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
+                    [placeholder]="'Please, select languages you want to learn'" [data]="dropdownList"
+                    [(ngModel)]="user.wantedLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
+                  </ng-multiselect-dropdown>
+                </div>
+              </div>
               <h4>Description</h4>
               <textarea name="introduction" rows="6" class="form-control" [(ngModel)]="user.introduction"></textarea>
               <h4>Interests:</h4>
@@ -97,7 +115,15 @@
             </form>
           </tab>
           <tab heading="Edit Photos">
-            <p>Photo edit will go here</p>
+            <div class="form-row">
+              <div class="col-md-6 my-3">
+                <h4>Main Photo</h4>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="customFile">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+              </div>
+            </div>
           </tab>
         </tabset>
       </div>

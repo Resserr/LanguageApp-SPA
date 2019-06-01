@@ -1,204 +1,111 @@
-  <section>
-    <div class="container">
-        <div class="filters">
-          <div class="container ">
-            <div class="d-flex justify-content-between">
-                <h2>Find friends in diferent languages </h2>
-                <span class="d-flex">
-                  <img id="geo" src="src/assets/img/geo.png" alt="">
+<section>
+  <div class="container">
+    <div class="filters">
+      <div class="container ">
+        <div class="d-flex justify-content-between">
+          <h2>Find friends in diferent languages </h2>
+          <span class="d-flex">
+            <i class="fa fa-map-marker fa-lg pr-2" aria-hidden="true"></i>
+            <select>
+              <option selected> All countries</option>
+              <option>Brazil</option>
+              <option>Poland</option>
+              <option>Ukraine</option>
+              <option>Spain</option>
+              <option>Norway</option>
+              <option>England</option>
+              <option>France</option>
+              <option>Germany</option>
+            </select>
+          </span>
+        </div>
+        <div class="d-flex justify-content-around second_row">
+          <div class="d-flex align-items-center">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </div>
+
+          <div class="d-flex lang_filter">
+            <i class="fas fa-clipboard-check icons"></i>
+            <p class="input_name">Native languages<p>
                 <select>
-                   <option selected> All countries</option>
-                   <option>Brazil</option>
-                   <option>Poland</option>
-                   <option>Ukraine</option>
-                   <option>Spain</option>
-                   <option>Norway</option>
-                   <option>England</option>
-                   <option>France</option>
-                   <option>Germany</option>
+                  <option selected> All languages</option>
+                  <option>Polish</option>
+                  <option>Portugal</option>
+                  <option>Ukrainian</option>
+                  <option>Spanish</option>
+                  <option>English</option>
+                  <option>German</option>
+                  <option>Russian</option>
+                  <option>French</option>
                 </select>
-                </span>
+          </div>
+
+          <div class="d-flex lang_filter">
+            <i class="fas fa-graduation-cap icons"></i>
+            <p class="input_name">Want to learn<p>
+                <select>
+                  <option selected> All languages</option>
+                  <option>Polish</option>
+                  <option>Portugal</option>
+                  <option>Ukrainian</option>
+                  <option>Spanish</option>
+                  <option>English</option>
+                  <option>German</option>
+                  <option>Russian</option>
+                  <option>French</option>
+                </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="userlist">
+      <div class="container">
+        <div *ngFor="let user of users" class="row user">
+          <div class="d-flex flex-column col-lg-2 ">
+            <div class="block1">
+              <img class="avatar " src="{{user.photoUrl}}" alt="{{user.name}}">
+              <span class="d-flex justify-content-around opinions">
+                <i class="fa fa-thumbs-up icons3"></i>
+                <p><span class="good">5</span></p>
+                <i class="fa fa-thumbs-down icons3"></i>
+                <p><span class="bad">2</span></p>
+              </span>
             </div>
-            <div class="d-flex justify-content-around second_row">
-              <div class="d-flex align-items-center">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </div>
+          <div class="col-lg-10">
+            <div class="row">
+              <div class="col-lg-3">
+                <a [routerLink]="['/profile/', user.id]" >
+                  <h5>{{user.name}} {{user.surname}}</h5>
+                </a>
               </div>
-
-                <div class="d-flex lang_filter">
-                  <i class="fas fa-clipboard-check icons"></i>
-                  <p class="input_name">Native languages<p>
-                  <select>
-                       <option selected> All languages</option>
-                       <option>Polish</option>
-                       <option>Portugal</option>
-                       <option>Ukrainian</option>
-                       <option>Spanish</option>
-                       <option>English</option>
-                       <option>German</option>
-                       <option>Russian</option>
-                       <option>French</option>
-                  </select>
-                    </div>
-
-                  <div class="d-flex lang_filter">
-                    <i class="fas fa-graduation-cap icons"></i>
-                    <p class="input_name">Want to learn<p>
-                      <select>
-                           <option selected> All languages</option>
-                           <option>Polish</option>
-                           <option>Portugal</option>
-                           <option>Ukrainian</option>
-                           <option>Spanish</option>
-                           <option>English</option>
-                           <option>German</option>
-                           <option>Russian</option>
-                           <option>French</option>
-                      </select>
+              <div class="offset col-lg-7">
+              </div>
+              <div class="col-lg-2">
+                <span class="d-flex">
+                  <i class="fa fa-map-marker fa-lg pr-2" aria-hidden="true"></i>
+                  <p><span class="location"> {{user.country}} </span></p>
+                </span>
+              </div>
+            </div>
+            <div class="about">
+              <p>{{user.introduction}}</p>
+            </div>
+            <div class="row">
+              <div class="d-flex col-lg-5">
+                <i class="fa fa-graduation-cap icons2" aria-hidden="true"></i>
+                <p>Known languages: <span class="languages">{{user.knownLanguages}}</span></p>
+              </div>
+              <div class="offset col-lg-1"> </div>
+              <div class="d-flex col-lg-6">
+                <i class="fa fa-leanpub icons2"></i>
+                <p>I want to learn: <span class="languages">{{user.wantedLanguages}}</span></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="userlist">
-          <div class="container">
-
-            <div class="row user">
-                <div class="d-flex flex-column col-lg-2 ">
-                  <div class="block1">
-                  <img  class="avatar " src="src/assets/img/avatar.jpg" alt="">
-                  <span class="d-flex justify-content-around opinions">
-                    <i class="fas fa-thumbs-up icons3"></i>
-                    <p><span class="good">5</span></p>
-                    <i class="fas fa-thumbs-down icons3"></i>
-                    <p><span class="bad">2</span></p>
-                  </span>
-                  </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="row">
-                      <div class="col-lg-3">
-                        <a href="#"><h5>Eric Bicfalvi</h5></a>
-                      </div>
-                      <div class="offset col-lg-7">
-                      </div>
-                      <div class="col-lg-2">
-                        <span class="d-flex">
-                          <img id="geo_s" src="src/assets/img/geo.png" alt="">
-                         <p><span class="location"> Brazil  </span></p>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="about">
-                      <p> A Romanian professional footballer who plays
-                         mainly as an attacking midfielder for Russian club Ural Yekaterinburg.
-                         He began his senior career in Romania with Fink Fenster Petrești in the third league,
-                        going on to amass over 100 Liga I appearances for Jiul Petroșani, Steaua București and Gloria Buzău combined.</p>
-                    </div>
-                    <div class="row">
-                      <div class="d-flex col-lg-5">
-                        <i class="fas fa-clipboard-check icons2"></i>
-                        <p>Native languages: <span class="languages"> portugal, ukrainian</span></p>
-                      </div>
-                      <div class="offset col-lg-1"> </div>
-                      <div class="d-flex col-lg-6">
-                        <i class="fas fa-graduation-cap icons2"></i>
-                        <p>I want to learn: <span class="languages"> english, german</span></p>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="row user">
-                  <div class="d-flex flex-column col-lg-2 ">
-                    <div class="block1">
-                    <img  class="avatar " src="src/assets/img/avatar.jpg" alt="">
-                    <span class="d-flex justify-content-around opinions">
-                      <i class="fas fa-thumbs-up icons3"></i>
-                      <p><span class="good">5</span></p>
-                      <i class="fas fa-thumbs-down icons3"></i>
-                      <p><span class="bad">2</span></p>
-                    </span>
-                    </div>
-                  </div>
-                  <div class="col-lg-10">
-                      <div class="row">
-                        <div class="col-lg-3">
-                          <a href="#"><h5>Eric Bicfalvi</h5></a>
-                        </div>
-                        <div class="offset col-lg-7">
-                        </div>
-                        <div class="col-lg-2">
-                          <span class="d-flex">
-                            <img id="geo_s" src="src/assets/img/geo.png" alt="">
-                           <p><span class="location"> Brazil  </span></p>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="about">
-                        <p> A Romanian professional footballer who plays
-                           mainly as an attacking midfielder for Russian club Ural Yekaterinburg.
-                           He began his senior career in Romania with Fink Fenster Petrești in the third league,
-                          going on to amass over 100 Liga I appearances for Jiul Petroșani, Steaua București and Gloria Buzău combined.</p>
-                      </div>
-                      <div class="row">
-                        <div class="d-flex col-lg-5">
-                          <i class="fas fa-clipboard-check icons2"></i>
-                          <p>Native languages: <span class="languages"> portugal, ukrainian</span></p>
-                        </div>
-                        <div class="offset col-lg-1"> </div>
-                        <div class="d-flex col-lg-6">
-                          <i class="fas fa-graduation-cap icons2"></i>
-                          <p>I want to learn: <span class="languages"> english, german</span></p>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="row user">
-                    <div class="d-flex flex-column col-lg-2 ">
-                      <div class="block1">
-                      <img  class="avatar " src="src/assets/img/avatar.jpg" alt="">
-                      <span class="d-flex justify-content-around opinions">
-                        <i class="fas fa-thumbs-up icons3"></i>
-                        <p><span class="good">5</span></p>
-                        <i class="fas fa-thumbs-down icons3"></i>
-                        <p><span class="bad">2</span></p>
-                      </span>
-                      </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="row">
-                          <div class="col-lg-3">
-                            <a href="#"><h5>Eric Bicfalvi</h5></a>
-                          </div>
-                          <div class="offset col-lg-7">
-                          </div>
-                          <div class="col-lg-2">
-                            <span class="d-flex">
-                              <img id="geo_s" src="src/assets/img/geo.png" alt="">
-                             <p><span class="location"> Brazil  </span></p>
-                            </span>
-                          </div>
-                        </div>
-                        <div class="about">
-                          <p> A Romanian professional footballer who plays
-                             mainly as an attacking midfielder for Russian club Ural Yekaterinburg.
-                             He began his senior career in Romania with Fink Fenster Petrești in the third league,
-                            going on to amass over 100 Liga I appearances for Jiul Petroșani, Steaua București and Gloria Buzău combined.</p>
-                        </div>
-                        <div class="row">
-                          <div class="d-flex col-lg-5">
-                            <i class="fas fa-clipboard-check icons2"></i>
-                            <p>Native languages: <span class="languages"> portugal, ukrainian</span></p>
-                          </div>
-                          <div class="offset col-lg-1"> </div>
-                          <div class="d-flex col-lg-6">
-                            <i class="fas fa-graduation-cap icons2"></i>
-                            <p>I want to learn: <span class="languages"> english, german</span></p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

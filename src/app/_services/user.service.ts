@@ -16,7 +16,11 @@ export class UserService {
   }
 
   getAllUsers(): Observable<any> {
-    return this.firestore.collection('Users').get();
+    const list: User[] = [];
+    return this.firestore.collection('Users').get().pipe(map( (data) => {
+      data.docs.forEach((value) => list.push(value.data() as User));
+      return list;
+    }));
   }
   setUser(id: string, user: User): Observable<any> {
     return from(this.firestore.collection('Users').doc(id).set(user));

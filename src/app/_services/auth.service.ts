@@ -7,25 +7,28 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Router } from '@angular/router';
 import { UserService } from './user.service';
 import { User } from '../_models/User';
+import { UserHelper } from '../_helpers/user.helper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private jwtHelper: JwtHelperService = new JwtHelperService();
+  newUser: User;
   decodedToken: any;
-
   constructor(
     public authServiceFirebase: AngularFireAuth,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private userHelper: UserHelper
   ) {}
 
-  public register(email: string, password: string) {
+  public register(obj: any) {
+    this.newUser = obj as User;
     return this.getObservableAndSetToken(
       this.authServiceFirebase.auth.createUserWithEmailAndPassword(
-        email,
-        password
+        obj.email,
+        obj.password
       ),
       true
     );
@@ -45,10 +48,6 @@ export class AuthService {
   public isLogedIn(): boolean {
     return !this.jwtHelper.isTokenExpired(localStorage.getItem('token'));
   }
-
-  // private isLogedIn() {
-  //   this.theBoolean.next((!this.jwtHelper.isTokenExpired(localStorage.getItem('token'))));
-  // }
 
   public loginWithFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
@@ -74,7 +73,6 @@ export class AuthService {
           value.user.getIdToken(true).then(token => {
             localStorage.setItem('token', token);
             this.setInitialSettings(token, isNew);
-            console.log(this.decodedToken);
           });
         }
       })
@@ -86,36 +84,12 @@ export class AuthService {
       if (isNew) {
         this.userService.setUser(
           this.decodedToken.user_id,
-          this.initializeNewUser()
+          this.userHelper.initializeNewUser(this.newUser, this.decodedToken.user_id)
         );
         this.router.navigate(['/profile/edit']);
       } else {
         this.router.navigate(['/news']);
       }
     }
-  }
-  private initializeNewUser(): User {
-    const user: User = {
-      name: '',
-      surname: '',
-      gender: '',
-      // age?:,
-      created: new Date(),
-      country: '',
-      city: '',
-      photoUrl:
-        'https://firebasestorage.googleapis.com/v0/b/languageapp-8a657.appspot.com' +
-        '/o/avatar.jpg?alt=media&token=49e68538-ca65-461b-a2d3-4938660ae19b',
-      introduction: ''
-      // interests?: '',
-      // knownLanguages?: [''],
-      // wantedLanguages?: [''],
-      // visitedCountries?: [''],
-      // countriesToVisit?: [''],
-      // facebookLink?: '',
-      // instagramLink?: '',
-      // email?: '',
-    };
-    return user;
   }
 }

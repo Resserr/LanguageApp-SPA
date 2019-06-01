@@ -4,47 +4,40 @@
       <div class="row">
         <div class="info col-lg-7">
           <div class="container">
-            <h2>Eric Bicfalvi</h2>
+            <h2>{{user.name}} {{user.surname}}</h2>
             <div class="row">
               <div class="av col-lg-5">
-                <img class="avatar " src="../../assets/img/avatar.jpg" alt="">
+                <img class="avatar " src="{{user.photoUrl}}" alt="{{user.name}}">
               </div>
               <div class="main_info col-lg-7 ">
                 <div class="d-flex justify-content-start">
-                  <p>21 y.o.</p>
+                  <!-- <p>21 y.o.</p> -->
                   <span class="d-flex">
-                    <img id="geo" src="../../assets/img/geo.png" alt="">
-                    <p><span class="location"> Lutsk </span></p>
+                    <i class="fa fa-map-marker fa-lg pr-2" aria-hidden="true"></i>
+                    <p><span class="location"> {{user.country}} </span></p>
                   </span>
                 </div>
                 <span class="d-flex">
-                  <i class="fa fa-clipboard-check icons"></i>
-                  <p>Native languages: <span class="languages"> portugal, ukrainian</span></p>
+                  <i class="fa fa-check-square icons"></i>
+                  <p>Known languages: <span class="languages"> {{user.knownLanguages}} </span></p>
                 </span>
                 <span class="d-flex">
                   <i class="fa fa-graduation-cap icons"></i>
-                  <p>I want to learn: <span class="languages"> english, german</span></p>
+                  <p>I want to learn: <span class="languages"> {{user.wantedLanguages}} </span></p>
                 </span>
               </div>
             </div>
             <div class="about">
               <h4>About me:</h4>
-              <p><span class="about_description"> He is a Romanian professional footballer who plays
-                  mainly as an attacking midfielder for Russian club Ural Yekaterinburg.
-                  He began his senior career in Romania with Fink Fenster Petrești in the third league,
-                  going on to amass over 100 Liga I appearances for Jiul Petroșani, Steaua București and Gloria Buzău
-                  combined. He then changed countries for the first time in 2012, and has since competed professionally
-                  in
-                  Ukraine, China and Russia.
-                  Bicfalvi has been a full Romania international since November 2014.</span></p>
+              <p><span class="about_description"> {{user.introduction}} </span></p>
             </div>
             <div class="countries">
               <span class="d-flex">
-                <i class="fas fa-flag icons"></i>
+                <i class="fa fa-flag icons"></i>
                 <p>I visited: <span class="v_countries"> Ukraine, Brazil, Russia</span></p>
               </span>
               <span class="d-flex">
-                <i class="far fa-flag icons"></i>
+                <i class="fa fa-flag icons"></i>
                 <p>I want to visit: <span class="w_countries"> England, Poland</span></p>
               </span>
             </div>
@@ -60,24 +53,24 @@
             <i class="fas fa-users icons2"></i>
           </span>
           <span class="d-flex main_data">
-            <i class="fas fa-envelope icons"></i>
-            <p>Email: <span class="email">erik@gmail.com</span></p>
+            <i class="fa fa-envelope icons"></i>
+            <p>Email: <span class="email">{{user.email}}</span></p>
           </span>
           <span class="d-flex">
-            <i class="fab fa-facebook icons"></i>
+            <i class="fa fa-facebook icons"></i>
             <p><span class="fb">Facebook</span></p>
           </span>
           <span class="d-flex">
-            <i class="fab fa-instagram icons"></i>
+            <i class="fa fa-instagram icons"></i>
             <p><span class="fb">Instagram</span></p>
           </span>
           <button type="button" class="btn btn-info chat_btn">Chat</button>
           <div class="opinions">
             <h4>Opinions</h4>
             <span class="d-flex justify-content-around">
-              <i class="fas fa-thumbs-up icons3"></i>
+              <i class="fa fa-thumbs-up icons3"></i>
               <p><span class="good">5</span></p>
-              <i class="fas fa-thumbs-down icons3"></i>
+              <i class="fa fa-thumbs-down icons3"></i>
               <p><span class="bad">2</span></p>
             </span>
 

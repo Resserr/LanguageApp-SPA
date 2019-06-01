@@ -23,7 +23,7 @@ export const routes: Routes = [
       { path: 'news', component: NewsComponent },
       { path: 'profile/:id', component: ProfileComponent, resolve: {user: MemberResolver}},
       { path: 'members', component: FiendFriendsComponent, resolve: {users : MembersResolver} },
-      { path: 'profile/edit', component: ProfileEditComponent, resolve: { user : ProfileEditResolver,
+      { path: 'profile', component: ProfileEditComponent, resolve: { user : ProfileEditResolver,
          languages: ProfileEditLangResolver } },
     ]
   },

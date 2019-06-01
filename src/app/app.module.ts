@@ -1,3 +1,4 @@
+import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -33,6 +34,8 @@ import { LanguageService } from './_services/language.service';
 import { UserHelper } from './_helpers/user.helper';
 import { MemberResolver } from './_resolvers/member.resolver';
 import { MembersResolver } from './_resolvers/members.resolver';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MessengerComponent } from './messenger/messenger.component';
 
 @NgModule({
    declarations: [
@@ -46,7 +49,9 @@ import { MembersResolver } from './_resolvers/members.resolver';
       NewsComponent,
       ProfileComponent,
       ProfileEditComponent,
-      FiendFriendsComponent
+      FiendFriendsComponent,
+      ContactUsComponent,
+      MessengerComponent
    ],
    imports: [
       BrowserModule,
@@ -58,7 +63,10 @@ import { MembersResolver } from './_resolvers/members.resolver';
       AngularFirestoreModule,
       BsDropdownModule.forRoot(),
       TabsModule.forRoot(),
-      NgMultiSelectDropDownModule.forRoot()
+      NgMultiSelectDropDownModule.forRoot(),
+      AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB3JRtwW1rFF6vaWIIIestjYyetTzTqrtA'
+    })
    ],
    providers: [
       AuthService,

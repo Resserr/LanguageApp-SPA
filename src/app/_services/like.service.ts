@@ -14,29 +14,15 @@ export class LikeService {
   }
 
   addLike(docId: string, userId: string, isLiked: boolean): Observable<void> {
-    return from(this.collection.doc(docId).collection('Users').doc(userId).update({
+    return from(this.collection.doc(docId).collection('Users').doc(userId).set({
       'isLiked': isLiked
     }));
   }
-
-  getAllLikes(docId: string): Observable<number> {
-    return from(this.collection.doc(docId).collection('Users').ref.where('isLiked', '==', true).get()).pipe(map( data => {
-      return data.docs.length;
-    }));
+  deleteLike(docLikeId: string, docUserId: string): Observable<void> {
+    return from(this.collection.doc(docLikeId).collection('Users').doc(docUserId).delete());
   }
 
-  getAllDislikes(docId: string): Observable<number> {
-    return from(this.collection.doc(docId).collection('Users').ref.where('isLiked', '==', false).get()).pipe(map( data => {
-      return data.docs.length;
-    }));
+  userExist(docLikeId: string, docUserId: string): Observable<boolean> {
+    return this.collection.doc(docLikeId).collection('Users').doc(docUserId).get().pipe(map( data => data.exists));
   }
-
-  // createUserLike(docId: string): Observable<any> {
-  //   return from(this.collection.doc(docId).set({}));
-  // }
-
-  isExist(docId: string): Observable<boolean> {
-    return this.collection.doc(docId).get().pipe(map(data => data.exists ));
-  }
-
 }

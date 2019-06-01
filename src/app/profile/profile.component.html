@@ -50,7 +50,7 @@
           <h2>Contact</h2>
           <span class="d-flex justify-content-around">
             <button type="button" class="btn btn-primary">Invite to friends</button>
-            <i class="fas fa-users icons2"></i>
+            <i class="fa fa-users icons2"></i>
           </span>
           <span class="d-flex main_data">
             <i class="fa fa-envelope icons"></i>
@@ -68,14 +68,11 @@
           <div class="opinions">
             <h4>Opinions</h4>
             <span class="d-flex justify-content-around">
-              <i class="fa fa-thumbs-up icons3"></i>
+              <i class="fa fa-thumbs-up icons3" (click)="addLike()"></i>
               <p><span class="good">{{user.likes}}</span></p>
               <i class="fa fa-thumbs-down icons3"></i>
               <p><span class="bad">{{user.dislikes}}</span></p>
             </span>
-
-
-
           </div>
 
         </div>

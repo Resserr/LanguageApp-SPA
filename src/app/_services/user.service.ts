@@ -25,4 +25,10 @@ export class UserService {
   setUser(id: string, user: User): Observable<any> {
     return from(this.firestore.collection('Users').doc(id).set(user));
   }
+
+  modifyUserField(id: string, obj: {}) {
+    this.firestore.collection('Users').doc(id).update(
+      obj
+    );
+  }
 }

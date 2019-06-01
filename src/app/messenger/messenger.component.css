@@ -1,0 +1,237 @@
+/*-------Specification--------*/
+p {
+	margin: 0;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+	color: #fff;
+}
+
+a { 
+	color: #000;
+}
+
+a, button {
+	transition: all 0.7s ease;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+	{
+		outline: none;
+}
+
+
+/* ---------Start----------- */
+
+.messenger {
+  /*position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;*/
+}
+
+.container-fluid-plain {
+	padding: 0;
+}
+
+.chats {
+
+}
+
+.chats__title {
+	padding-left: 75px;
+	padding-top: 12px;
+	margin-bottom: 20px;
+}
+
+.chats__title:before {
+	content: 'C';
+	font-size: 24px;
+	text-align: center;
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 1.4em;
+	border-radius: 50%;
+	border: 1px solid black;
+	position: absolute;
+	left: 20px;
+	top: 6px;
+	background: rgba(112, 112, 112, 0.2);
+}
+
+.chats:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: rgba(133, 133, 133, 0.3);
+}
+
+input[name=search] {
+  width: 160px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.search {
+	border-radius: 6px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[name=search]:focus {
+  width: 90%;
+}
+
+/* ------ Friends chats------- */
+
+.friends {
+	padding: 15px 10px 25px 10px;
+}
+
+.helpness1 {
+	border-right: 2px solid rgba(112, 112, 112, 0.3);
+
+}
+
+.friend__item {
+	padding: 10px;
+	background: rgba(112, 112, 112, 0.15);
+	border-radius: 15px;
+	margin-bottom: 5px;
+}
+
+.friend__item:hover {
+	background: rgba(112, 112, 112, 0.3);
+}
+
+.friend__img {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+
+.friends__help {
+	padding-left: 20px;
+	padding-top: 7px;
+}
+
+.friend__name {
+	font-size: 18px;
+	padding-bottom: 3px;
+	font-weight: 700;
+}
+
+/* ------ Conversation ------- */
+
+.conversation {
+	border-right: 2px solid rgba(112, 112, 112, 0.3);
+}
+
+.conversation__info {
+	padding-top: 20px;
+	box-shadow: 0px 1px 9px 0px;
+}
+
+.helpness2 {
+	padding-left: 20px !important;
+}
+
+.conversation__info:after {
+	content: '';
+	display: block;
+	margin-top: 25px;
+	width: 100%;
+	height: 2px;
+	background: rgba(133, 133, 133, 0.3);
+}
+
+.conversation__img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.conversation__name {
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.conversation__status {
+	color: rgba(112, 112, 112, 0.3);
+	padding-top: 2px;
+}
+
+/* ---------- Messages ---------- */
+
+.messages {
+	height: 510px;
+}
+
+.enter-message {
+	padding-top: 8px;
+}
+
+.enter-message:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: rgba(133, 133, 133, 0.3);
+}
+
+.myinput {
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+}
+
+.myinput:focus {
+	box-shadow: 0 0 20px 7px rgba(133,133,133,0.3);
+}
+
+/* -------- Profile ------- */
+
+.profile__img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.profile__info {
+	text-align: center;
+	padding-top: 100px;
+}
+
+.profile__name {
+	font-size: 18px;
+	font-weight: 900;
+	padding-top: 15px;
+}
+
+.profile__languages {
+	padding-top: 20px;
+}
+
+.profile__description {
+	padding-top: 35px;
+}
+

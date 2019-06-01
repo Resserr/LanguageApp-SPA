@@ -13,26 +13,27 @@ export class LikeService {
     this.collection = this.firestore.collection('Likes');
   }
 
-  addLike(docId: string, userId: string, isLiked: boolean): Observable<any> {
-    return from(this.collection.doc(docId).update({
-      'user_id': userId,
+  addLike(docId: string, userId: string, isLiked: boolean): Observable<void> {
+    return from(this.collection.doc(docId).collection('Users').doc(userId).update({
       'isLiked': isLiked
     }));
   }
 
-  getAllLikes(docId: string): Observable<Like[]> {
-    return this.collection.doc(docId).get().pipe(map(data => {
-      data.
+  getAllLikes(docId: string): Observable<number> {
+    return from(this.collection.doc(docId).collection('Users').ref.where('isLiked', '==', true).get()).pipe(map( data => {
+      return data.docs.length;
     }));
   }
 
-  getAllDislikes() {
-    return from(this.collection.ref.where('isLiked', '==', false).get()).pipe(map(data => data.docs.length));
+  getAllDislikes(docId: string): Observable<number> {
+    return from(this.collection.doc(docId).collection('Users').ref.where('isLiked', '==', false).get()).pipe(map( data => {
+      return data.docs.length;
+    }));
   }
 
-  createUserLike(docId: string): Observable<any> {
-    return from(this.collection.doc(docId).set({}));
-  }
+  // createUserLike(docId: string): Observable<any> {
+  //   return from(this.collection.doc(docId).set({}));
+  // }
 
   isExist(docId: string): Observable<boolean> {
     return this.collection.doc(docId).get().pipe(map(data => data.exists ));

@@ -16,6 +16,6 @@ export class ProfileComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.activatedRoute.data.subscribe(data => (this.user = data['user']));
+    this.activatedRoute.data.subscribe(data => this.user = data['user']);
   }
 }

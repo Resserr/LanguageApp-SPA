@@ -9,7 +9,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { ProfileEditComponent } from './profileEdit/profileEdit.component';
 import { ProfileEditResolver } from './_resolvers/profileEdit.resolver';
 import { ArticleComponent } from "./article/article.component";
-import { MessagingComponent } from './messaging/messaging.component';
+import { MessangingComponent } from '../app/messanging/messanging.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,7 +26,7 @@ export const routes: Routes = [
   },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'messaging', component: MessagingComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'messager', component: MessangingComponent },
   { path: "article/:key", component: ArticleComponent },
 ];

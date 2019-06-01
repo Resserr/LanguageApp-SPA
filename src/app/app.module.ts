@@ -28,51 +28,48 @@ import { UserService } from "./_services/user.service";
 import { ProfileEditResolver } from "./_resolvers/profileEdit.resolver";
 import { ArticleComponent } from "./article/article.component";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
-// messaging
-import { AngularFireMessagingModule } from "@angular/fire/messaging";
-import { MessagingService } from "../app/messaging/messaging.service";
-import { AngularFireDatabaseModule } from "@angular/fire/database";
-import { AsyncPipe } from "../../node_modules/@angular/common";
-import { MessagingComponent } from "./messaging/messaging.component";
+import { MessangingComponent } from "./messanging/messanging.component";
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    RegisterComponent,
-    HomeComponent,
-    FooterComponent,
-    AboutComponent,
-    NewsComponent,
-    ProfileComponent,
-    ProfileEditComponent,
-    FiendFriendsComponent,
-    ArticleComponent,
-    MessagingComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(routes),
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    BsDropdownModule.forRoot(),
-    TabsModule.forRoot(),
-    AngularFireDatabaseModule,
-    AngularFireMessagingModule,
-  ],
-  providers: [
-    AuthService,
-    AlertifyService,
-    AuthGuard,
-    UserService,
-    ProfileEditResolver,
-    MessagingService,
-    AsyncPipe
-  ],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      NavbarComponent,
+      LoginComponent,
+      RegisterComponent,
+      HomeComponent,
+      FooterComponent,
+      AboutComponent,
+      NewsComponent,
+      ProfileComponent,
+      ProfileEditComponent,
+      FiendFriendsComponent,
+      ArticleComponent,
+      MessangingComponent,
+
+
+   ],
+   imports: [
+      BrowserModule,
+      HttpClientModule,
+      FormsModule,
+      RouterModule.forRoot(routes),
+      AngularFireModule.initializeApp(environment.firebaseConfig),
+      AngularFireAuthModule,
+      AngularFirestoreModule,
+      BsDropdownModule.forRoot(),
+      TabsModule.forRoot()
+   ],
+   providers: [
+      AuthService,
+      AlertifyService,
+      AuthGuard,
+      UserService,
+      ProfileEditResolver
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {}

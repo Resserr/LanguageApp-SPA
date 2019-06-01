@@ -8,3 +8,7 @@
 .dropdown-item {
   cursor: pointer;
 }
+#navbar1{
+  text-align: right;
+  margin-right: 20px;
+}

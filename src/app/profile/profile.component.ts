@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../_models/User';
+import { LikeService } from '../_services/like.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,10 +10,12 @@ import { User } from '../_models/User';
 })
 export class ProfileComponent implements OnInit {
   user: User;
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private likeService: LikeService
+  ) {}
 
   ngOnInit() {
-    this.activatedRoute.data.subscribe(data => this.user = data['user']);
+    this.activatedRoute.data.subscribe(data => (this.user = data['user']));
   }
-
 }

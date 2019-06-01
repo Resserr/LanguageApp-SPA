@@ -33,6 +33,7 @@ import { LanguageService } from './_services/language.service';
 import { UserHelper } from './_helpers/user.helper';
 import { MemberResolver } from './_resolvers/member.resolver';
 import { MembersResolver } from './_resolvers/members.resolver';
+import { LikeService } from './_services/like.service';
 
 @NgModule({
    declarations: [
@@ -71,6 +72,7 @@ import { MembersResolver } from './_resolvers/members.resolver';
       MemberResolver,
       MembersResolver,
       UserHelper,
+      LikeService,
    ],
    bootstrap: [
       AppComponent

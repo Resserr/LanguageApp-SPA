@@ -1,5 +1,3 @@
-import { SocialMedia } from './SocialMedia';
-
 export interface User {
   id?: string;
   name: string;

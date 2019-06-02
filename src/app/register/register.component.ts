@@ -27,16 +27,20 @@ export class RegisterComponent implements OnInit {
 
   authWithFacebook() {
     this.authService.loginWithFacebook().subscribe(
-      user => console.log(user),
+      null,
       error => {
         this.alertifyService.error('Something went wrong. Try again!');
-      }
+      },
+      () => this.alertifyService.success('Succsesfully sign in with Facebook')
     );
   }
-// this.alertifyService.success('Succsesfully sign up')
   authWithGoogle() {
     this.authService.loginWithGoogle().subscribe(
-      user => console.log(user)
+      null,
+      error => {
+        this.alertifyService.error('Something went wrong. Try again!');
+      },
+      () => this.alertifyService.success('Succsesfully sign in with Google')
     );
   }
 }

@@ -18,6 +18,7 @@ export class ProfileEditComponent implements OnInit {
   fileInputValue: string;
   dropdownList = [];
   dropdownSettings = {};
+  dateTime: Date;
   constructor(
     private userService: UserService,
     private authService: AuthService,

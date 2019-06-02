@@ -13,8 +13,7 @@ export class LoginComponent implements OnInit {
   model: any = {};
   constructor(
     private authService: AuthService,
-    private alertifyService: AlertifyService,
-    private routerService: Router
+    private alertifyService: AlertifyService
   ) {}
 
   ngOnInit() {}
@@ -26,5 +25,23 @@ export class LoginComponent implements OnInit {
         value => this.alertifyService.success('Successfully loged in.'),
         err => this.alertifyService.error('Something went wrong')
       );
-    }
+  }
+  authWithFacebook() {
+    this.authService.loginWithFacebook().subscribe(
+      null,
+      error => {
+        this.alertifyService.error('Something went wrong. Try again!');
+      },
+      () => this.alertifyService.success('Succsesfully sign in with Facebook')
+    );
+  }
+  authWithGoogle() {
+    this.authService.loginWithGoogle().subscribe(
+      null,
+      error => {
+        this.alertifyService.error('Something went wrong. Try again!');
+      },
+      () => this.alertifyService.success('Succsesfully sign in with Google') 
+    );
+  }
 }

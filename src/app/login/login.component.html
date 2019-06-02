@@ -4,12 +4,10 @@
       <div class="col-xs-8 col-sm-10 center-container pl-4 pr-4 ">
         <div class="icons-container">
           <ul class="list-inline">
-            <li class="list-inline-item"><i class="fa fa-facebook-official fa-2x facebook-style" aria-hidden="true"></i>
+            <li class="list-inline-item" (click)="authWithFacebook()"><i class="fa fa-facebook-official fa-2x facebook-style" aria-hidden="true"></i>
             </li>
-            <li class="list-inline-item"><i class="fa fa-google-plus-square fa-2x google-plus-style"
+            <li class="list-inline-item" (click)="authWithGoogle()"><i class="fa fa-google-plus-square fa-2x google-plus-style"
                 aria-hidden="true"></i></li>
-            <li class="list-inline-item"><i class="fa fa-twitter-square fa-2x twitter-style" aria-hidden="true"></i>
-            </li>
           </ul>
         </div>
         <div class="text-center mt-3 login">

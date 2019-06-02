@@ -1,14 +1,14 @@
 <section class="contacts">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-6">
+				<div class="col-md-4 col-lg-6">
 					<div class="something">
 						<h2 class="contacts__title">
 							Contacts
 						</h2>
 					</div>
 				</div>
-				<div class="col-6">
+				<div class="col-md-8 col-lg-6">
 					<div class="something">
 						<p class="contacts__text">
 							The site is free and open to anyone looking to practice a with a native speaker in exchange for help with their own. Once registered, users can search for speaking partners via the Profile Search or submit a short writing piece and ask for corrections from native speakers. Those using the writing function are asked to return the favor by correcting short samples in their native language.
@@ -22,7 +22,7 @@
 		<div class="container-fluid container-fluid-plain">
 			<div class="row no-gutters">
 				<div class="col">
-					<agm-map [latitude]="lat" [longitude]="lng">
+					<agm-map [latitude]="lat" [zoom]="14" [longitude]="lng">
 					  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 					</agm-map>
 				</div>
@@ -36,18 +36,18 @@
 				<div class="informer">
 					<div class="informer__table">
 						<div class="informer__help">
-							<div class="informer__title d-flex justify-content-between">
+							<div class="informer__title d-flex justify-content-between flex-column flex-sm-row">
 								<h4 class="informer__main">
 									LanguageApp
 								</h4>
 								<div class="informer__social d-flex justify-content-between">
-									<a href="#" class="informer__link">
+									<a href="https://www.facebook.com/" class="informer__link" target="_blank">
 										<i class="fa fa-facebook"></i>
 									</a>
-									<a href="#" class="informer__link">
+									<a href="https://trello.com/b/LLmmJm20/spa-frontend" class="informer__link" target="_blank">
 										<i class="fa fa-trello"></i>
 									</a>
-									<a href="#" class="informer__link">
+									<a href="https://github.com/Resserr/LanguageApp-SPA" target="_blank" class="informer__link">
 										<i class="fa fa-github-square"></i>
 									</a>
 								</div>

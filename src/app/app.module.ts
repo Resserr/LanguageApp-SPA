@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -39,6 +40,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MessengerComponent } from './messenger/messenger.component';
 import { DislikeService } from './_services/dislike.service';
 import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
+import { UploadService } from './_services/upload.service';
 
 @NgModule({
   declarations: [
@@ -69,7 +71,8 @@ import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
     NgMultiSelectDropDownModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB3JRtwW1rFF6vaWIIIestjYyetTzTqrtA'
-    })
+    }),
+    AngularFireStorageModule
   ],
   providers: [
     AuthService,
@@ -85,6 +88,7 @@ import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
     LikeService,
     DislikeService,
     LikeDislikeHelper,
+    UploadService
   ],
   bootstrap: [AppComponent]
 })

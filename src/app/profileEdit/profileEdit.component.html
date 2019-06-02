@@ -1,131 +1,133 @@
-<div class="container my-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <h1>Your Profile</h1>
-    </div>
-    <div class="col-sm-8">
-      <div *ngIf="editForm.dirty" class="alert alert-info">
-        <strong>Information:</strong> You have made changes. Any unsaved changes will be lost!
+<div class="wrapper">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-md-6 col-sm-8">
+        <h1>Your Profile</h1>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <div><img src="{{user.photoUrl}}" alt="mainphoto" class="card-img-top img-thumbnail">
-        </div>
-        <div class="card-body">
-          <div>
-            <strong>Location:</strong>
-            <p>{{user.city}}, {{user.country}}</p>
-          </div>
-          <div>
-            <strong>Date of birth:</strong>
-            <p>{{user.dateOfBirth}}</p>
-          </div>
-          <div>
-            <strong>Member since:</strong>
-            <p>{{user.created.toDate() | date}}</p>
-          </div>
-        </div>
-        <div class="card-footer">
-          <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save changes</button>
+      <div class="col-sm-8">
+        <div *ngIf="editForm.dirty" class="alert alert-info">
+          <strong>Information:</strong> You have made changes. Any unsaved changes will be lost!
         </div>
       </div>
     </div>
-    <div class="col-sm-8">
-      <div class="tab-panel">
-        <tabset class="member-tabset">
-          <tab heading="Edit Profile">
-            <form #editForm="ngForm" id="editForm" (ngSubmit)="updateChanges()">
-              <h4>Main Information:</h4>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="username">Name:</label>
-                  <input type="text" class="form-control" name="username" [(ngModel)]="user.name">
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="surname">Surname</label>
-                  <input type="text" class="form-control" name="surname" [(ngModel)]="user.surname">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="gender">Gender: </label>
-                  <input type="text" class="form-control" name="gender" [(ngModel)]="user.gender">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="city">City</label>
-                  <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="country">Country</label>
-                  <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="b_date">Date of birth: </label>
-                  <input type="date" class="form-control" name="b_date" value="1990-01-01" min="1945-01-01"
-                    max="2015-01-01" [(ngModel)]="user.dateOfBirth">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="facebook_link">Facebook:</label>
-                  <input type="text" class="form-control" name="facebook_link" [(ngModel)]="user.facebookLink">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="instagram_link">Instagram:</label>
-                  <input type="text" class="form-control" name="instagram_link" [(ngModel)]="user.instagramLink">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-6 mb-3">
-                  <label for="email">Email:</label>
-                  <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
-                </div>
-              </div>
-              <h4>Languages you know</h4>
-              <div class="form-row">
-                <div class="col-md-8 mb-3">
-                  <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
-                    [placeholder]="'Please, select languages you know'" [data]="dropdownList"
-                    [(ngModel)]="user.knownLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
-                  </ng-multiselect-dropdown>
-                </div>
-              </div>
-              <h4>Languages you want to learn</h4>
-              <div class="form-row">
-                <div class="col-md-8 mb-3">
-                  <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
-                    [placeholder]="'Please, select languages you want to learn'" [data]="dropdownList"
-                    [(ngModel)]="user.wantedLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
-                  </ng-multiselect-dropdown>
-                </div>
-              </div>
-              <h4>Description</h4>
-              <textarea name="introduction" rows="6" class="form-control" [(ngModel)]="user.introduction"></textarea>
-              <h4>Interests:</h4>
-              <textarea name="lookingFor" rows="6" class="form-control" [(ngModel)]="user.interests"></textarea>
-            </form>
-          </tab>
-          <tab heading="Edit Photos">
-            <div class="form-row">
-              <div class="col-md-6 my-3">
-                <h4>Main Photo</h4>
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
-                </div>
-              </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div><img src="{{user.photoUrl}}" alt="mainphoto" class="card-img-top img-thumbnail">
+          </div>
+          <div class="card-body">
+            <div>
+              <strong>Location:</strong>
+              <p>{{user.city}}, {{user.country}}</p>
             </div>
-          </tab>
-        </tabset>
+            <div>
+              <strong>Date of birth:</strong>
+              <p>{{user.dateOfBirth}}</p>
+            </div>
+            <div>
+              <strong>Member since:</strong>
+              <p>{{user.created.toDate() | date}}</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button [disabled]="!editForm.dirty" form="editForm" class="btn btn-success btn-block">Save changes</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="tab-panel">
+          <tabset class="member-tabset">
+            <tab heading="Edit Profile">
+              <form #editForm="ngForm" id="editForm" (ngSubmit)="updateChanges()">
+                <h4>Main Information:</h4>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="username">Name:</label>
+                    <input type="text" class="form-control" name="username" [(ngModel)]="user.name">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="surname">Surname</label>
+                    <input type="text" class="form-control" name="surname" [(ngModel)]="user.surname">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="gender">Gender: </label>
+                    <input type="text" class="form-control" name="gender" [(ngModel)]="user.gender">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" name="city" [(ngModel)]="user.city">
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="country">Country</label>
+                    <input type="text" class="form-control" name="country" [(ngModel)]="user.country">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="b_date">Date of birth: </label>
+                    <input type="date" class="form-control" name="b_date" value="1990-01-01" min="1945-01-01"
+                      max="2015-01-01" [(ngModel)]="user.dateOfBirth">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="facebook_link">Facebook:</label>
+                    <input type="text" class="form-control" name="facebook_link" [(ngModel)]="user.facebookLink">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="instagram_link">Instagram:</label>
+                    <input type="text" class="form-control" name="instagram_link" [(ngModel)]="user.instagramLink">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" name="email" [(ngModel)]="user.email">
+                  </div>
+                </div>
+                <h4>Languages you know</h4>
+                <div class="form-row">
+                  <div class="col-md-8 mb-3">
+                    <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
+                      [placeholder]="'Please, select languages you know'" [data]="dropdownList"
+                      [(ngModel)]="user.knownLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
+                    </ng-multiselect-dropdown>
+                  </div>
+                </div>
+                <h4>Languages you want to learn</h4>
+                <div class="form-row">
+                  <div class="col-md-8 mb-3">
+                    <ng-multiselect-dropdown class="my-5" [ngModelOptions]="{standalone: true}"
+                      [placeholder]="'Please, select languages you want to learn'" [data]="dropdownList"
+                      [(ngModel)]="user.wantedLanguages" [settings]="dropdownSettings" (click)="onItemSelect()">
+                    </ng-multiselect-dropdown>
+                  </div>
+                </div>
+                <h4>Description</h4>
+                <textarea name="introduction" rows="6" class="form-control" [(ngModel)]="user.introduction"></textarea>
+                <h4>Interests:</h4>
+                <textarea name="lookingFor" rows="6" class="form-control" [(ngModel)]="user.interests"></textarea>
+              </form>
+            </tab>
+            <tab heading="Edit Photos">
+              <div class="form-row">
+                <div class="col-md-6 my-3">
+                  <h4>Main Photo</h4>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Choose file</label>
+                  </div>
+                </div>
+              </div>
+            </tab>
+          </tabset>
+        </div>
       </div>
     </div>
   </div>

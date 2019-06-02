@@ -1,28 +1,29 @@
 <nav class="navbar navbar-expand-md navbar-light bg-light font-weight-bold">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">LanguageApp</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
-    	<span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbar1">
       <ul class="navbar-nav ml-auto scalable">
         <li *ngIf="!logedIn()" class="nav-item">
-          <a class="nav-link" [routerLink]="['']" >Home</a>
+          <a class="nav-link" [routerLink]="['']">Home</a>
         </li>
         <li *ngIf="logedIn()" class="nav-item">
-          <a class="nav-link" [routerLink]="['/news']" >News</a>
+          <a class="nav-link" [routerLink]="['/news']">News</a>
         </li>
         <li *ngIf="logedIn()" class="nav-item">
           <a class="nav-link" [routerLink]="['/members']">Find friends</a>
         </li>
         <li *ngIf="logedIn()" class="nav-item">
-          <a class="nav-link"href="#" >Messages</a>
+          <a class="nav-link" [routerLink]="['/messenger']">Messages</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/about']" >About</a>
+          <a class="nav-link" [routerLink]="['/about']">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact us</a>
+          <a class="nav-link" [routerLink]="['/contactUs']">Contact us</a>
         </li>
       </ul>
       <div *ngIf="logedIn()" class="dropdown ml-5" dropdown>
@@ -30,9 +31,9 @@
           Welcome {{authService.decodedToken.email | titlecase}}
         </a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
-          <a class="dropdown-item nav-link" [routerLink]="['/profile/edit']"><i class="fa fa-user"></i> Edit Profile</a>
+          <a class="dropdown-item nav-link" [routerLink]="['/profile']"><i class="fa fa-user"></i> Edit Profile</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item nav-link" (click)="logout()" ><i class="fa fa-sign-out"></i> Logout</a>
+          <a class="dropdown-item nav-link" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
         </div>
       </div>
       <ul *ngIf="!logedIn()" class="navbar-nav scalable ml-5">

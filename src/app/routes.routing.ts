@@ -12,6 +12,9 @@ import { ProfileEditLangResolver } from './_resolvers/profileEdit-lang.resolver'
 import { FiendFriendsComponent } from './fiend-friends/fiend-friends.component';
 import { MembersResolver } from './_resolvers/members.resolver';
 import { MemberResolver } from './_resolvers/member.resolver';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MessengerComponent } from './messenger/messenger.component';
+
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,11 +26,14 @@ export const routes: Routes = [
       { path: 'news', component: NewsComponent },
       { path: 'profile/:id', component: ProfileComponent, resolve: {user: MemberResolver}},
       { path: 'members', component: FiendFriendsComponent, resolve: {users : MembersResolver} },
-      { path: 'profile/edit', component: ProfileEditComponent, resolve: { user : ProfileEditResolver,
+      { path: 'profile', component: ProfileEditComponent, resolve: { user : ProfileEditResolver,
          languages: ProfileEditLangResolver } },
+       { path: 'messenger', component: MessengerComponent }
     ]
   },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contactUs', component: ContactUsComponent },
+
 ];

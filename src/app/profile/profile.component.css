@@ -69,6 +69,7 @@ section {
   font-size: 25px;
   padding-top: 5px;
   margin-right: -40px;
+  cursor: pointer;
 }
 .good {
   color: green;

@@ -1,3 +1,4 @@
+import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
@@ -33,47 +34,58 @@ import { LanguageService } from './_services/language.service';
 import { UserHelper } from './_helpers/user.helper';
 import { MemberResolver } from './_resolvers/member.resolver';
 import { MembersResolver } from './_resolvers/members.resolver';
+import { LikeService } from './_services/like.service';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { MessengerComponent } from './messenger/messenger.component';
+import { DislikeService } from './_services/dislike.service';
+import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      NavbarComponent,
-      LoginComponent,
-      RegisterComponent,
-      HomeComponent,
-      FooterComponent,
-      AboutComponent,
-      NewsComponent,
-      ProfileComponent,
-      ProfileEditComponent,
-      FiendFriendsComponent
-   ],
-   imports: [
-      BrowserModule,
-      HttpClientModule,
-      FormsModule,
-      RouterModule.forRoot(routes),
-      AngularFireModule.initializeApp(environment.firebaseConfig),
-      AngularFireAuthModule,
-      AngularFirestoreModule,
-      BsDropdownModule.forRoot(),
-      TabsModule.forRoot(),
-      NgMultiSelectDropDownModule.forRoot()
-   ],
-   providers: [
-      AuthService,
-      AlertifyService,
-      AuthGuard,
-      UserService,
-      LanguageService,
-      ProfileEditResolver,
-      ProfileEditLangResolver,
-      MemberResolver,
-      MembersResolver,
-      UserHelper,
-   ],
-   bootstrap: [
-      AppComponent
-   ]
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    FooterComponent,
+    AboutComponent,
+    NewsComponent,
+    ProfileComponent,
+    ProfileEditComponent,
+    FiendFriendsComponent,
+    ContactUsComponent,
+    MessengerComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(routes),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
+    NgMultiSelectDropDownModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyB3JRtwW1rFF6vaWIIIestjYyetTzTqrtA'
+    })
+  ],
+  providers: [
+    AuthService,
+    AlertifyService,
+    AuthGuard,
+    UserService,
+    LanguageService,
+    ProfileEditResolver,
+    ProfileEditLangResolver,
+    MemberResolver,
+    MembersResolver,
+    UserHelper,
+    LikeService,
+    DislikeService,
+    LikeDislikeHelper,
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

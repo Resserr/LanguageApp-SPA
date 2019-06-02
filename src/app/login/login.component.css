@@ -98,5 +98,12 @@ a.a-hovered:hover {
   .icons-container{
     top:4%;
   }
+  .main_block{
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .fa-2x{
+    font-size: 28px;
+} 
 }
 

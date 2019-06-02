@@ -1,4 +1,7 @@
-
+.wrapper{
+  overflow-x: hidden!important;
+  overflow-y: hidden!important;
+}
 .img-thumbnail {
   margin: 25px;
   width: 85%;
@@ -16,6 +19,29 @@
   background-color: #fff;
   border-top: none;
 }
+#editForm{
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .img-thumbnail {
+    margin: 17px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img-thumbnail {
+    margin: 12px;
+  }
+  }
+@media screen and (max-width: 576px) {
+  .img-thumbnail {
+    margin: 21px;
+  }
+}
+
+
+
+
 
 /* .main {
   background-image: radial-gradient(

@@ -79,3 +79,50 @@ section {
   color: red;
   font-size: 25px;
 }
+@media screen and (max-width: 1200px) {
+  .data1{
+    font-size: 15px;
+  }
+  }
+@media screen and (max-width: 992px) {
+  .block_contact{
+    margin-top: 20px;
+    max-width: 350px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  .block_contact p{
+    font-size: 20px;
+  }
+  .icons3 {
+    margin-right: 5px;
+    margin-left: 20px;
+  }
+  .contact-el{
+    justify-content: center!important;
+  }
+  .icons{
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_info{
+    margin-top: 20px;
+  }
+  .about{
+    padding-top: 10px;
+  }
+  .block_contact{
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  }
+@media screen and (max-width: 576px) {
+  .info, .block_contact{
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: none;
+  }
+
+}

@@ -8,3 +8,17 @@
 .dropdown-item {
   cursor: pointer;
 }
+#navbar1{
+  text-align: right;
+  margin-right: 20px;
+}
+@media (min-width: 768px) and (max-width: 815px) {
+.dropdown{
+  margin-right:-30px;
+  margin-left: 2rem!important;
+}
+.nav-link{
+  padding-right: 6px!important;
+  padding-left: 6px!important;
+}
+}

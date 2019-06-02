@@ -153,3 +153,36 @@ button, button:hover, button:focus, button:active
 .worker__social {
 	padding-top: 25px;
 }
+
+@media screen and (max-width: 992px) {
+	.about-us__title, .about__text{
+		text-align: center;
+	}
+
+	.about-img {
+		padding: 40px 0;
+		text-align: center;
+	}
+
+	.mission {
+		text-align: center;
+	}
+
+	.rocket {
+		padding-top: 40px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about-img img {
+		width: 100%;
+	}
+
+	.main__title {
+		font-size: 38px;
+	}
+
+	.about-us__title {
+		font-size: 31px;
+	}
+}

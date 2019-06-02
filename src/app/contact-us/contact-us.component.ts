@@ -9,9 +9,9 @@ export class ContactUsComponent implements OnInit {
 
   constructor() { }
 
-  lat = 50.065907;
-  lng = 19.947894;
-
+  lat: number = 50.0699018;
+  lng: number = 19.9467885;
+  
   ngOnInit() {
   }
 

@@ -37,6 +37,8 @@ import { MembersResolver } from './_resolvers/members.resolver';
 import { LikeService } from './_services/like.service';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MessengerComponent } from './messenger/messenger.component';
+import { DislikeService } from './_services/dislike.service';
+import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
 
 @NgModule({
   declarations: [
@@ -80,7 +82,9 @@ import { MessengerComponent } from './messenger/messenger.component';
     MemberResolver,
     MembersResolver,
     UserHelper,
-    LikeService
+    LikeService,
+    DislikeService,
+    LikeDislikeHelper,
   ],
   bootstrap: [AppComponent]
 })

@@ -68,9 +68,9 @@
           <div class="opinions">
             <h4>Opinions</h4>
             <span class="d-flex justify-content-around">
-              <i class="fa fa-thumbs-up icons3" (click)="addLike()"></i>
+              <i class="fa fa-thumbs-up icons3" (click)="modifyLike()"></i>
               <p><span class="good">{{user.likes}}</span></p>
-              <i class="fa fa-thumbs-down icons3"></i>
+              <i class="fa fa-thumbs-down icons3" (click)="modifyDislike()"></i>
               <p><span class="bad">{{user.dislikes}}</span></p>
             </span>
           </div>

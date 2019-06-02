@@ -65,7 +65,7 @@
         <div *ngFor="let user of users" class="row user">
           <div class="d-flex flex-column col-lg-2 col-md-3 ">
             <div class="block1">
-              <img class="avatar " src="{{user.photoUrl}}" alt="{{user.name}}">
+              <img class="avatar" src="{{user.photoUrl}}" alt="{{user.name}}">
               <span class="d-flex justify-content-around opinions">
                 <i class="fa fa-thumbs-up icons3" (click)="modifyLike(user)"></i>
                 <p><span class="good">{{user.likes}}</span></p>

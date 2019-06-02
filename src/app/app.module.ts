@@ -41,6 +41,7 @@ import { MessengerComponent } from './messenger/messenger.component';
 import { DislikeService } from './_services/dislike.service';
 import { LikeDislikeHelper } from './_helpers/like-dislike.helper';
 import { UploadService } from './_services/upload.service';
+import { StartUpGuard } from './_guards/startup.guard';
 
 @NgModule({
   declarations: [
@@ -88,7 +89,8 @@ import { UploadService } from './_services/upload.service';
     LikeService,
     DislikeService,
     LikeDislikeHelper,
-    UploadService
+    UploadService,
+    StartUpGuard,
   ],
   bootstrap: [AppComponent]
 })

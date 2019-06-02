@@ -14,7 +14,6 @@ import { UserHelper } from '../_helpers/user.helper';
 })
 export class AuthService {
   private jwtHelper: JwtHelperService = new JwtHelperService();
-  newUser: User;
   decodedToken: any;
   constructor(
     public authServiceFirebase: AngularFireAuth,
@@ -24,13 +23,12 @@ export class AuthService {
   ) {}
 
   public register(obj: any) {
-    this.newUser = obj as User;
     return this.getObservableAndSetToken(
       this.authServiceFirebase.auth.createUserWithEmailAndPassword(
         obj.email,
         obj.password
       ),
-      true
+      obj
     );
   }
 
@@ -65,31 +63,31 @@ export class AuthService {
 
   private getObservableAndSetToken(
     promise: Promise<firebase.auth.UserCredential>,
-    isNew: boolean = false
+    obj: any = null
   ) {
     return from(promise).pipe(
       map(value => {
         if (value) {
           value.user.getIdToken(true).then(token => {
             localStorage.setItem('token', token);
-            this.setInitialSettings(token, isNew);
+            this.decodedToken = this.jwtHelper.decodeToken(token);
+            this.setInitialSettings(obj);
           });
         }
       })
     );
   }
-  private setInitialSettings(token: string, isNew: boolean) {
-    this.decodedToken = this.jwtHelper.decodeToken(token);
+  private setInitialSettings(obj: any) {
+    const user_id: string = this.decodedToken.user_id;
     if (this.isLogedIn()) {
-      if (isNew) {
-        this.userService.setUser(
-          this.decodedToken.user_id,
-          this.userHelper.initializeNewUser(this.newUser, this.decodedToken.user_id)
-        );
-        this.router.navigate(['/profile/edit']);
-      } else {
-        this.router.navigate(['/news']);
-      }
+      this.userService.getUser(user_id).subscribe((data) => {
+        if (data) {
+          this.router.navigate(['/news']);
+        } else {
+          this.userService.setUser(user_id, this.userHelper.initializeNewUser(obj, this.decodedToken));
+          this.router.navigate(['/profile']);
+        }
+      });
     }
   }
 }

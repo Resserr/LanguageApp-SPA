@@ -14,6 +14,7 @@ import { MembersResolver } from './_resolvers/members.resolver';
 import { MemberResolver } from './_resolvers/member.resolver';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { MessengerComponent } from './messenger/messenger.component';
+import { StartUpGuard } from './_guards/startup.guard';
 
 
 export const routes: Routes = [
@@ -31,8 +32,15 @@ export const routes: Routes = [
        { path: 'messenger', component: MessengerComponent }
     ]
   },
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    canActivate: [StartUpGuard],
+    runGuardsAndResolvers: 'always',
+    children: [
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
+    ]
+  },
   { path: 'about', component: AboutComponent },
   { path: 'contactUs', component: ContactUsComponent },
 

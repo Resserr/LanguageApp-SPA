@@ -54,15 +54,15 @@
           </span>
           <span class="d-flex main_data data1 contact-el">
             <i class="fa fa-envelope icons"></i>
-            <p>Email: <span class="email">{{user.email}}</span></p>
+            <p>Email: <span class="email"> <a href="mailto:{{user.email}}">{{user.email}}</a></span></p>
           </span>
           <span class="d-flex data1 contact-el">
             <i class="fa fa-facebook icons"></i>
-            <p><span class="fb">Facebook</span></p>
+            <a href="{{user.facebookLink}}"> <p><span class="fb">Facebook</span></p></a>
           </span>
           <span class="d-flex data1 contact-el">
             <i class="fa fa-instagram icons"></i>
-            <p><span class="fb">Instagram</span></p>
+            <a href="{user.instagramLink}"><p><span class="fb">Instagram</span></p></a>
           </span>
           <button type="button" class="btn btn-info chat_btn">Chat</button>
           <div class="opinions">

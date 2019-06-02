@@ -1,6 +1,8 @@
 .main {
   height: 100%;
   padding: 0px;
+  overflow-x: hidden!important;
+  overflow-y: hidden!important;
 }
 
 .row {

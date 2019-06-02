@@ -69,6 +69,30 @@ button, button:hover, button:focus, button:active
 	padding-left: 40px;
 }
 
+.similar {
+	text-align: center;
+}
+
+.similar__text {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+.similar__link {
+	display: block;
+    width: 200px;
+    height: 46px;
+    background: #325dff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2.7em;
+    border-radius: 10px;
+    margin: 20px auto 0;
+}
+
 /* --------------------Mission-------------------- */
 
 .mission {

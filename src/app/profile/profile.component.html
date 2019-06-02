@@ -6,10 +6,10 @@
           <div class="container">
             <h2>{{user.name}} {{user.surname}}</h2>
             <div class="row">
-              <div class="av col-lg-5">
+              <div class="av col-lg-5 col-md-5">
                 <img class="avatar " src="{{user.photoUrl}}" alt="{{user.name}}">
               </div>
-              <div class="main_info col-lg-7 ">
+              <div class="main_info col-lg-7 col-md-7">
                 <div class="d-flex justify-content-start">
                   <!-- <p>21 y.o.</p> -->
                   <span class="d-flex">
@@ -46,33 +46,34 @@
           </div>
         </div>
         <div class="offset col-lg-2"></div>
-        <div class="data col-lg-3">
+        <div class="data col-lg-3 col-md-12 block_contact">
           <h2>Contact</h2>
-          <span class="d-flex justify-content-around">
+          <span class="d-flex justify-content-around contact-el">
             <button type="button" class="btn btn-primary">Invite to friends</button>
             <i class="fa fa-users icons2"></i>
           </span>
-          <span class="d-flex main_data">
+          <span class="d-flex main_data data1 contact-el">
             <i class="fa fa-envelope icons"></i>
             <p>Email: <span class="email">{{user.email}}</span></p>
           </span>
-          <span class="d-flex">
+          <span class="d-flex data1 contact-el">
             <i class="fa fa-facebook icons"></i>
             <p><span class="fb">Facebook</span></p>
           </span>
-          <span class="d-flex">
+          <span class="d-flex data1 contact-el">
             <i class="fa fa-instagram icons"></i>
             <p><span class="fb">Instagram</span></p>
           </span>
           <button type="button" class="btn btn-info chat_btn">Chat</button>
           <div class="opinions">
             <h4>Opinions</h4>
-            <span class="d-flex justify-content-around">
+            <span class="d-flex justify-content-around contact-el">
               <i class="fa fa-thumbs-up icons3" (click)="modifyLike()"></i>
               <p><span class="good">{{user.likes}}</span></p>
               <i class="fa fa-thumbs-down icons3" (click)="modifyDislike()"></i>
               <p><span class="bad">{{user.dislikes}}</span></p>
             </span>
+            
           </div>
 
         </div>

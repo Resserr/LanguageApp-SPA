@@ -1,6 +1,8 @@
    section{
      margin-top: 30px;
      margin-bottom: 60px;
+     overflow-x: hidden!important;
+     overflow-y: hidden!important;
    }
    .filters{
      padding-top: 20px;
@@ -96,3 +98,68 @@
      border-bottom-style: outset;
      border-bottom-width: thin;
    }
+   .map-icon{
+    padding-top: 6px;
+  }
+   
+   @media screen and (max-width: 1200px) {
+    
+    }
+  @media screen and (max-width: 992px) {
+  input{
+    max-width: 210px;
+  }
+  .filters2{
+    display: flex;
+  }
+ 
+  }
+  @media screen and (max-width: 768px) {
+   .first_row{
+      display: block!important;
+   }
+   .map-icon{
+     padding-top: 6px;
+   }
+   .countries-sel{
+    margin-top: 20px;
+    margin-bottom: 10px;
+   }
+   .block1{
+     display: flex;
+   }
+   .icons3 {
+    margin-right: 8px;
+    margin-left: 20px;
+    margin-top: 7px;
+    font-size: 40px;
+    }
+    .opinions{
+      margin-left: 150px;
+    }
+    .opinions p{
+      font-size: 40px;
+    }
+    .descr{
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    input{
+      margin-right: 10px;
+    }
+    .icons3 {
+      font-size: 30px;
+      margin-right: 2px;
+      margin-left: 10px;
+      margin-top: 9px;
+      }
+    .opinions{
+      margin-left: 10px;
+      margin-top: -17px;
+    }
+    .opinions p{
+      font-size: 30px;
+    }
+  
+  }

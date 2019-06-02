@@ -100,7 +100,12 @@ a.a-hovered:hover {
     .block-left{
         display: none;
     }
-    .icons-container{
-        top:4%;
+    .fa-2x{
+        font-size: 28px;
+    } 
+    
+      .signup-container{
+        margin-left: 5px;
+        margin-right: 5px;
       }
   }

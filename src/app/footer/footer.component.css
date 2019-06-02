@@ -65,3 +65,31 @@ button, button:hover, button:focus, button:active
 	background: #fff;
 	color: #325dff;
 }
+
+@media screen and (max-width: 768px) {
+	.footer {
+		padding: 20px 0;
+	}
+
+	.footer__logo {
+		text-align: center;
+	}
+
+	.contact-btn {
+		margin: 20px auto;
+	}
+
+	.cooperation__first {
+		padding-top: 20px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.cooperation {
+		padding-bottom: 20px;
+	}
+
+	.contact-btn {
+		margin: 0 auto;
+	}
+}
